@@ -47,70 +47,40 @@
       <div class="my-navbar-side-background"></div>
       <!-- content area-->
 
-      <div id="main" class="container-fluid" style="margin-left: 250px;">
+    <div id="main" class="container-fluid" style="margin-left: 250px;">
       <div class="col-sm-11 center-block">
-        <div class="col-sm-12 card-big"> 
-          <h1>Adding New User</h1>
-          <hr>     
-          <div class="col-sm-3" style="margin-top: 5%;">
-            <div class="text-center">
-              <img src="img/100.png" class="img-thumbnail" alt="avatar">       
-              <input type="file" id="hiddenFileInput" style="visibility:hidden">
-              <input type="button" value="Upload a photo..." class="form-control upload-margin" onclick="$('#hiddenFileInput').click();" />
-            </div>
-          </div>
-          <div class="col-sm-9">              
-            <form class="form-horizontal" role="form">
-              <div class="form-group">
-                <label class="col-sm-4 control-label">First name:</label>
-                <div class="col-sm-8">
-                  <input class="form-control" type="text" value="">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-4 control-label">Last name:</label>
-                <div class="col-sm-8">
-                  <input class="form-control" type="text" value="">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-4 control-label">Email:</label>
-                <div class="col-sm-8">
-                  <input class="form-control" type="text" value="">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-4 control-label">Role:</label>
-                <div class="col-sm-8">
-                  <input class="form-control" type="text" value="">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-4 control-label">Password:</label>
-                <div class="col-sm-8">
-                  <input class="form-control" type="password" value="">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-4 control-label">Confirm password:</label>
-                <div class="col-sm-8">
-                  <input class="form-control" type="password" value="">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-4 control-label"></label>
-                <div class="col-sm-8">
-                  <input type="button" class="btn btn-primary" value="Save Changes">
-                  <span></span>
-                  <input type="reset" class="btn btn-default pull-right" value="Cancel">
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>      
-    </div>
-      <!-- end content area -->
+        <div class="col-sm-12 card-big">           
+            <h1>Manage All Users</h1>
+            <ol class="breadcrumb">
+              <li class="active"><i class="fa fa-dashboard"></i> My Article</li>          
+                <li class="active">
+                  <button class="btn btn-success">
+                      <i class="fa fa-search-plus"></i>&nbsp;&nbsp;Create Article
+                  </button>   
+                  <button class="btn btn-info">
+                      <i class="fa fa-times"></i>&nbsp;&nbsp;Delete
+                  </button> 
+                  <button class="btn btn-primary">
+                      <i class="fa fa-edit"></i>&nbsp;&nbsp;Edit
+                  </button> 
+                </li>          
+            </ol>
+            <div class="panel panel-info">
+              <div class="panel-body">
+                <form role="form">
+                <div class="col-sm-4"><br> 
+                  <label>&nbsp;Search:</label>
+                  <div class="input-group">
+                    <input id="searchArticle" type="textbox" placeholder="Article " class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-info" type="button" id="addressSearch">Search</button>
+                    </span>
+                  </div>                                          
+                </div> 
+              </div>               
+            </div> 
+        </div>   
+      </div>
     </div>
   </div>
 </body>
