@@ -1,0 +1,83 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap/bootstrap.min.css">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+        /*
+        *Start Block of function show and hide content
+        */
+		$(".general_forum").click(function() {
+			$(".general_setting").show();
+            $(".topic_setting").hide();
+             $(".comment_setting").hide();
+             $(".categories_setting").hide();
+		});
+		$(".topic_forum").click(function() {
+			$(".topic_setting").show();
+            $(".general_setting").hide();
+            $(".categories_setting").hide();
+             $(".comment_setting").hide();
+		});
+		$(".comment_forum").click(function() {
+			$(".comment_setting").show();
+            $(".general_setting").hide();
+             $(".topic_setting").hide();
+            $(".categories_setting").hide();
+		});
+		$(".categories_forum").click(function() {
+			$(".categories_setting").show();
+            $(".general_setting").hide();
+             $(".comment_setting").hide();
+             $(".topic_setting").hide();
+		});
+        /*
+        *End Block of function show and hide content
+        */
+	});
+</script>
+<body>
+	<!-- start forums manage -->
+	<div class="tab_forums col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<ul class="nav nav-tabs">
+			<li class="general_forum active"><a href="#">General Setting</a></li>
+			<li class="topic_forum"><a href="#">Topic Setting</a></li>
+			<li class="comment_forum"><a href="#">Comment Setting</a></li>
+			<li class="categories_forum"><a href="#">Categories Setting</a></li>
+		</ul>
+	</div>
+	<!-- Block of general setting -->
+	<div class="general_setting col-md-12">
+        <!-- Start Block announcement -->
+		<div class="general_announcement col-md-12" style="border:1px solid;">
+            <table>
+                <thead>Announcement</thead>
+                <tbody>
+                    <th>Topic</th>
+                    <th>Author</th>
+                    <th>Last Post</th>
+                    <th>Replies</th>
+                    <th>View</th>
+                </tbody>
+            </table>
+        </div>
+        <!-- End Block announcement -->
+        <div class="general_topic col-md-12"></div>
+        <div class="general_graph_view col-md-12"></div>
+	</div>
+	<!-- end block of general setting -->
+	<!-- Block of topic setting -->
+	<div class="topic_setting"><p>2</p><p>2</p></div>
+	<!-- end block of topic setting -->
+	<!-- Block of comment setting -->
+	<div class="comment_setting"><p>3</p><p>3</p></div>
+	<!-- end block of comment setting -->
+	<!-- Block of categories setting -->
+	<div class="categories_setting"><p>4</p><p>4</p></div>
+	<!-- end block of categories setting -->
+	<!-- end forums manage -->
+
+</body>
+</html>

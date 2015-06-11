@@ -3,11 +3,14 @@ body {
   font-size: 1em;
 }
 .content-area {
-background-color: #fff;
+  margin-top: 54px;
+  background-color: #fff;
   height: 100%;
-  position: fixed;
+  position: static;
   margin-left: 247px;
-  width: 100%;
+}
+.toggle-area{
+  margin-left: 0px !important;
 }
 
 .my-body {
@@ -19,7 +22,7 @@ background-color: #fff;
 }
 
 .my-header {
-  position: relative;
+  position: fixed;
   float: left;
   width: 100%;
   height: 54px;
@@ -155,6 +158,7 @@ background-color: #fff;
   .my-body .content-area {
     width: 100%;
     margin-left: 0px;
+    margin-top: 0px;
   }
 
   .my-body .my-navbar-side-background {
@@ -222,6 +226,9 @@ background-color: #fff;
 }
 .my-header-content{
     display: none;
+}
+.my-header{
+    position: relative;   
 }
   
   
