@@ -9,9 +9,6 @@ body {
   position: static;
   margin-left: 247px;
 }
-.toggle-area{
-  margin-left: 0px !important;
-}
 
 .my-body {
   position: relative;
@@ -158,7 +155,6 @@ body {
   .my-body .content-area {
     width: 100%;
     margin-left: 0px;
-    margin-top: 0px;
   }
 
   .my-body .my-navbar-side-background {

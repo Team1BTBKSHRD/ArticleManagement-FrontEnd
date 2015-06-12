@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///C:/Users/PC1/Desktop/Chetra_Mini_Web_Final_Project/login.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" href="file:///C:/Users/PC1/Desktop/Chetra_Mini_Web_Final_Project/style/bootstrap.css">
+    <link rel="icon" href="file:///C:/Users/PC1/Desktop/Chetra_Mini_Web_Final_Project/img/logo.png" type="img/png">
+    <script src="./Login_files/jquery-2.1.4.js"></script>
+    <script src="./Login_files/bootstrap.js"></script>
+    <script src="./Login_files/bootstrapValidator.min.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <form action="./Login_files/Login.html" id="loginForm" method="post" role="form" novalidate="novalidate" class="bv-form"><button type="submit" class="bv-hidden-submit" disabled="disabled" style="display: none; width: 0px; height: 0px;"></button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <img src="./Login_files/logohrd.png" alt="HRD Login">
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <legend>Login</legend>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="form-group has-feedback has-error">
+                        <label for="">User Name :</label>
+                        <input type="text" class="form-control" name="username" placeholder="Input User Name" data-bv-field="username"><i class="form-control-feedback glyphicon glyphicon-remove" data-bv-icon-for="username" style=""></i>
+                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="username" data-bv-result="INVALID" style="">The username is required</small></div>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="form-group has-feedback has-error">
+                        <label for="">Password :</label>
+                        <input type="password" class="form-control" name="password" placeholder="Input Password" data-bv-field="password"><i class="form-control-feedback glyphicon glyphicon-remove" data-bv-icon-for="password" style=""></i>
+                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="password" data-bv-result="INVALID" style="">The password is required</small></div>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value=""> Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <button type="submit" class="btn btn-default" disabled="disabled"><span><a href="./Login_files/Login.html">Submit</a></span></button>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+    </form>
+    <script>
+    $(document).ready(function() {
+        var validator = $('#loginForm').bootstrapValidator({
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        }
+                    }
+                }
+            }
+        });
+        // validator.on("success.form.bv", function(e) {
+        //     e.preventDefault();
+        //     $("#loginForm").addClass("hidden");
+        //     //$("#confirmation").removeClass("hidden");
+        // });
+    });
+    </script>
+
+
+
+</body></html>

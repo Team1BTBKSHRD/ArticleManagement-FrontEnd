@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="author" content="Sun Vicheychetra">
+    <meta charset="UTF-8">
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="style/bootstrap.css" />
+    <link rel="icon" href="img/logo.png" type="img/png" />
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrapValidator.min.js"></script>
+    <title>HRD Article Management</title>
+    <title>Sign Up</title>
+</head>
+<style>
+body,
+html {
+    padding-top: 10px;
+}
+</style>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse"> <span class="sr-only">Toggle Navigation </span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="#" class="navbar-brand">HRD Article Management </a> </div>
+            <!--end navbar header-->
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li class="active"><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <!--end collapse-->
+        </div>
+        <!--end container-->
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            <h1><b>Signup</b></h1>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form method="post" action="index.html" class="form-horizontal" id="form-user">
+                    <div class="page-header">
+                        <h3>User Registration</h3>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">User Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="username" placeholder="Enter First Name"> </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">Password:</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" name="password" placeholder="Enter Last Name"> </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">Confirm Password:</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" name="confirmpassword" placeholder="Enter Last Name"> </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-9">
+                            <button type="submit" class="btn btn-primary" style="width:200px;">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function() {
+            $('#form-user').bootstrapValidator({
+                //excluded: [':disabled'],
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    username: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The username is required'
+                            },
+                            stringLength: {
+                                max: 20,
+                                message: "username must be no longer than 20 characters"
+                            }
+                        }
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The password is required'
+                            },
+                            stringLength: {
+                                min: 8,
+                                message: "Password must be 8 characters long"
+                            }
+                        }
+                    },
+                    confirmpassword: {
+                        validators: {
+                            notEmpty: {
+                                message: 'confirmpassword is required'
+                            },
+                            identical: {
+                                field: "password",
+                                message: "Password and confirmation must match"
+                            }
+                        }
+                    }
+
+                }
+            })
+        }
+
+    );
+    </script>
+</body>
+
+</html>

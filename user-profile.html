@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="author" content="Sun Vicheychetra">
+    <meta charset="UTF-8">
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrapValidator.min.js"></script>
+    <link rel="icon" href="img/logo.png" type="img/png" />
+    <title>HRD Article Management</title>
+    <style>
+    body {
+        padding-top: 50px;
+    }
+    
+    p {
+        padding: 10px;
+    }
+    
+    img {
+        padding-top: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation </span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">HRD Article Management </a>
+            </div>
+            <!--end navbar header-->
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="course.html">Course</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                        <li class="active"><a href="user-profile.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;My Account</a></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <!--end collapse-->
+        </div>
+        <!--end container-->
+    </nav>
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- User Content -->
+    <div class="container">
+        <div class="page-header">
+            <h2>Welcome!!!</h2></div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <h4 class="text-center">Logged user as</h4>
+                <a href="#"><img class="img-responsive center-block img-circle" src="img\head_first_java_second_edition.jpg"></img>
+                </a>
+                <br>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><span class="glyphicon glyphicon-user"></span> <b>User Name:</b></td>
+                            <td>User A</td>
+                        </tr>
+                        <tr>
+                            <td><span class="glyphicon glyphicon-home"></span> <b>City/Town:</b></td>
+                            <td>Phnom Penh</td>
+                        </tr>
+                        <tr>
+                            <td><span class="glyphicon glyphicon-globe"></span><b> Email:</b> </td>
+                            <td>abc@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="panel panel-default text-center">
+                <h4>Profile Setting</h4>
+                <a data-toggle="modal" data-target="#editModal">Edit Profile</a>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <h3>General Information</h3>
+            <hr>
+            <table class="table table-striped table-hover table-responsive">
+                <tbody>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Website:</td>
+                        <td class="col-sm-8">http://www.example.com</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Facebook ID:</td>
+                        <td class="col-sm-8">FbExample</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Skype ID:</td>
+                        <td class="col-sm-8">N/A</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Gmail ID:</td>
+                        <td class="col-sm-8">example@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Position:</td>
+                        <td class="col-sm-8">Student</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Institute:</td>
+                        <td class="col-sm-8">Royal University of Phnom Penh</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Optional Information</h3>
+            <hr>
+            <table class="table table-striped table-hover table-responsive">
+                <tbody>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Full Name:</td>
+                        <td class="col-sm-8">SUN Vicheychetra</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Gender:</td>
+                        <td class="col-sm-8">Male</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Country:</td>
+                        <td class="col-sm-8">Cambodia</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> City/Town:</td>
+                        <td class="col-sm-8">Phnom Penh</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Email:</td>
+                        <td class="col-sm-8">example@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Telephone:</td>
+                        <td class="col-sm-8">012345678</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4"><span class="glyphicon glyphicon-plus"></span> Address:</td>
+                        <td class="col-sm-8">Phnom Penh</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-lg">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h2 class="modal-title">Edit User Profile</h2>
+                </div>
+                <div class="modal-body">
+                    <!-- The form is placed inside the body of modal -->
+                    <form id="formEdit" method="post" class="form-horizontal">
+                        <h4><b>Genderal Information</b></h4>
+                        <hr>
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3">First Name:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="firstname" placeholder="Enter First Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="LastName" class="col-sm-3">Last Name:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3">Gender:</label>
+                            <div class="col-sm-9">
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" id="radioMale" value="Male"> Male
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" id="radioFemale" value="Female"> Female
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3">Country:</label>
+                            <div class="col-sm-9">
+                                <select name="country" class="form-control" id="selectCountry">
+                                    <option class="active">Cambodia</option>
+                                    <option>Korea</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="City" class="col-sm-3">City/Town: </label>
+                            <div class="col-sm-9">
+                                <input type="text" name="city" class="form-control" placeholder="Enter City/Town">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3">Email:</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="email" class="form-control" placeholder="example@mail.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3">Mobile Phone:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="mobilephone" placeholder="012345678">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3">Address:</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="3" name="address"></textarea>
+                            </div>
+                        </div>
+                        <hr>
+                        <h4><b>Optional Information</b></h4>
+                        <hr>
+                        <div class="form-group">
+                            <label for="websit" class="col-sm-3">Website:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="website" placeholder="Enter your websit"> </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="skype" class="col-sm-3">SkypeID:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="skype" placeholder="Enter your SkypeID"> </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3">FacebookID:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="facebook" placeholder="Enter FacebookID"> </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3">GmailID:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="gmail" placeholder="Enter GmailID">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3">Position:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="position" placeholder="Enter your Postion"> </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3">Institute:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="institute" placeholder="Enter your institute"> </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-5 col-xs-offset-3">
+                                <button type="submit" class="btn btn-primary">Save Change</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of Modal -->
+    <script>
+    $(document).ready(function() {
+        $('#formEdit').bootstrapValidator({
+            //excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                firstname: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The firstname is required'
+                        }
+                    }
+                },
+                lastname: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The lastname is required'
+                        }
+                    }
+                },
+                gender: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Gender is required'
+                        }
+                    }
+                },
+                country: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Country required'
+                        }
+                    }
+                },
+                city: {
+                    validators: {
+                        notEmpty: {
+                            message: 'City required'
+                        }
+                    }
+                },
+                mobilephone: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Mobile phone required'
+                        },
+                        regexp: {
+                            regexp: /^[1]?[0-9]\d{8}$/,
+                            message: '9 Digits only, and start with 0'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Email required'
+                        },
+                        emailAddress: {
+                            message: 'The value is not a valid email address'
+                        }
+                    }
+                },
+                address: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Address required'
+                        }
+                    }
+                }
+
+            }
+        })
+    });
+    </script>
+    <!--  end of script validation -->
+</body>
+
+</html>

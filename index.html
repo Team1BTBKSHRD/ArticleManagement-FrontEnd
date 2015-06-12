@@ -1,339 +1,277 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0">
-    <title>index</title>
-    <link rel="stylesheet" href="css/standardize.css">
-    <link rel="stylesheet" href="css/index-grid.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
-    <script src="js/jquery-1.11.3.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            /*
-             *Animations Navbar Side
-             */
-            var b = false;
-            $("#menu").click(function() {
-            	/*
-            	 * Swidth : get broswer width size.
-            	 * Check Swidth > 768 : Big Screen
-            	 * 
-            	 */
-                var Swidth = innerWidth;
-                if (Swidth > 768) {
-                    if (b == false) {
-                    	// Hide the left side bar
-                        $(".my-navbar-side ,.my-navbar-side-background").hide();
-                        // To make content area width 100%
-                        $(".content-area").animate({
-                            marginLeft: '0px'
-                        });
-                        b = true;
-                    } else {
-                        $(".content-area").stop();
-                        // To make content area small
-                        $(".content-area").css({
-                            "margin-left": "247px"
-                        });
-
-                        $(".my-navbar-side ,.my-navbar-side-background").show();
-                        b = false;
-                    }
-                } else {
-                	// content area width 100%
-                    if (b == false) {
-                        $(".my-navbar-side").hide();
-                        $(".my-navbar-side-background").hide();
-                        b = true;
-                    } else {
-                        $(".content-area").stop();
-                        $(".my-navbar-side").show();
-                        $(".content-area").css({
-                            "margin-left": "0px"
-                        });
-                        $(".my-navbar-side-background").hide();
-                        b = false;
-                    }
-                }
-            });
-            /*
-             * End Animations Navbar Side
-             */
-
-
-            /*
-             *Start Block of function show and hide content
-             */
-            $(".general_forum").click(function() {
-                $(".general_setting").show();
-                $(".topic_setting").hide();
-                $(".comment_setting").hide();
-                $(".categories_setting").hide();
-            });
-            $(".topic_forum").click(function() {
-                $(".topic_setting").show();
-                $(".general_setting").hide();
-                $(".categories_setting").hide();
-                $(".comment_setting").hide();
-            });
-            $(".comment_forum").click(function() {
-                $(".comment_setting").show();
-                $(".general_setting").hide();
-                $(".topic_setting").hide();
-                $(".categories_setting").hide();
-            });
-            $(".categories_forum").click(function() {
-                $(".categories_setting").show();
-                $(".general_setting").hide();
-                $(".comment_setting").hide();
-                $(".topic_setting").hide();
-            });
-            /*
-             *End Block of function show and hide content
-             */
-        });
-    </script>
+    <meta name="author" content="Sun Vicheychetra">
+    <meta charset="UTF-8">
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style\bootstrap.css" type="text/css">
+    <link rel="icon" href="img/logo.png" type="img/png" />
+    <title>HRD Article Management</title>
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+    
+    p {
+        padding: 10px;
+    }
+    
+    img {
+        padding-top: 10px;
+    }
+    
+    .carousel,
+    .item,
+    .active {
+        height: 100%;
+    }
+    
+    .carousel-inner {
+        height: 100%;
+    }
+    /* Background images are set within the HTML using inline CSS, not here */
+    
+    .fill {
+        width: 100%;
+        height: 100%;
+        /*background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;*/
+    }
+    </style>
 </head>
 
-<body class="body page-index clearfix">
-    <div class="my-wrapper">
-        <div class="my-header clearfix">
-            <div class="my-web-brand">
-                <a href="#"><img src="img/Site-Logo-text.png"><span>Dashboard</span></a>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <span class="sr-onl">Toggle Navigation </span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">HRD Article Management </a>
             </div>
-            <div class="my-menu-btn ">
-                <a id="menu" href="#"><i class="fa fa-bars"></i> Menu</a>
-            </div>
-            <div class="my-header-content">
-                <div class="my-header-message">
-                    <a href="#"> <i class="fa fa-envelope icon-margin-right"></i> Messages
-                    </a>
-                </div>
-                <div class="my-header-logout">
-                    <a href="#"> <i class="fa fa-sign-out icon-margin-right"></i> Logout
-                    </a>
-                </div>
-            </div>
-            <div class="my-navbar-side">
-                <!-- navbar-side-list-->
-                <ul>
-                    <a href="#">
-                        <li><i class="fa fa-user icon-margin-right"></i> Users
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li><i class="fa fa-book icon-margin-right"></i> Articles
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li class="forum_list"><i class="fa fa-users icon-margin-right"></i> Forums</li>
-                    </a>
+            <!--end navbar header-->
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="course.html">Course</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                        <li><a href="user-profile.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;My Account</a></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
                 </ul>
-                </ul>
-                <!--end navbar-side-list-->
             </div>
+            <!--end collapse-->
         </div>
-        <div class="my-body clearfix">
-            <div class="my-navbar-side-background"></div>
-            <!-- content area-->
-            <div class="content-area">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="page-title">
-                                <h1>
-									Dashboard <small>Content Overiew</small>
-								</h1>
-                                <ol class="breadcrumb">
-                                    <li class="active"><i class="fa fa-dashboard"></i> Dashboard
-                                    </li>
-                                </ol>
-                                <!-- start forums manage -->
-                                <div class="tab_forums col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <ul class="nav nav-tabs">
-                                        <li class="general_forum active"><a href="#">General
-												Setting</a></li>
-                                        <li class="topic_forum"><a href="#">Topic Setting</a></li>
-                                        <li class="comment_forum"><a href="#">Comment Setting</a></li>
-                                        <li class="categories_forum"><a href="#">Categories
-												Setting</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Block of general setting -->
-                            <div class="general_setting col-md-12 col-sm-12">
-                                <!-- Start Block announcement -->
-                                <div class="general_announcement col-md-10 col-sm-10 container table-bordered" style="margin-top: 5px;">
-                                    <h2>Announcement</h2>
-                                    <table class="table table-striped  ">
-                                        <thead>
-                                            <tr>
-                                                <th>Topic</th>
-                                                <th>Author</th>
-                                                <th>Last Post</th>
-                                                <th>Replies</th>
-                                                <th>View</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>File IO</td>
-                                                <td>Doe</td>
-                                                <td>29/10/2015</td>
-                                                <td>150</td>
-                                                <td>232</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Oracle Database</td>
-                                                <td>Dome</td>
-                                                <td>09/12/2014</td>
-                                                <td>187</td>
-                                                <td>1127</td>
-                                            </tr>
-                                            <tr>
-                                                <td>JQuery</td>
-                                                <td>Nata</td>
-                                                <td>01/06/2015</td>
-                                                <td>82</td>
-                                                <td>98</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- End Block announcement -->
-
-                            <!-- Start Block announcement -->
-                            <div class="general_announcement col-md-10 col-sm-10 container table-bordered" style="margin-top: 5px;">
-                                <h2>Announcement</h2>
-                                <table class="table table-striped  ">
-                                    <thead>
-                                        <tr>
-                                            <th>Topic</th>
-                                            <th>Author</th>
-                                            <th>Last Post</th>
-                                            <th>Replies</th>
-                                            <th>View</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>File IO</td>
-                                            <td>Doe</td>
-                                            <td>29/10/2015</td>
-                                            <td>150</td>
-                                            <td>232</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Oracle Database</td>
-                                            <td>Dome</td>
-                                            <td>09/12/2014</td>
-                                            <td>187</td>
-                                            <td>1127</td>
-                                        </tr>
-                                        <tr>
-                                            <td>JQuery</td>
-                                            <td>Nata</td>
-                                            <td>01/06/2015</td>
-                                            <td>82</td>
-                                            <td>98</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- End Block announcement -->
-
-                        <!-- Start Block Topic -->
-                        <div class="general_topic  col-sm-12 col-md-12">
-                            <div class="col-md-10 col-sm-10 container table-bordered" style="margin-top: 5px;">
-                                <h2>Topic</h2>
-                                <table class="table table-striped  ">
-                                    <thead>
-                                        <tr>
-                                            <th>Topic</th>
-                                            <th>Author</th>
-                                            <th>Last Post</th>
-                                            <th>Replies</th>
-                                            <th>View</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>File IO</td>
-                                            <td>Doe</td>
-                                            <td>29/10/2015</td>
-                                            <td>150</td>
-                                            <td>232</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Oracle Database</td>
-                                            <td>Dome</td>
-                                            <td>09/12/2014</td>
-                                            <td>187</td>
-                                            <td>1127</td>
-                                        </tr>
-                                        <tr>
-                                            <td>JQuery</td>
-                                            <td>Nata</td>
-                                            <td>01/06/2015</td>
-                                            <td>82</td>
-                                            <td>98</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- End Block Topic -->
-
-                        <!-- Start Block graph-->
-                        <div class="general_graph_view col-md-12">
-                            <div></div>
-                        </div>
-                        <!-- End Block graph -->
+        <!--end container-->
+    </nav>
+    <div id="carousel-id" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-1" data-slide-to="0" class=""></li>
+            <li data-target="#carousel-2" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-3" data-slide-to="2" class="active"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item">
+                <div><img src="img/elearning-banner-2.jpg" class="fill img-responsive">
+                </div>
+                <div class="carousel-caption" style="font-color:blue">
+                    <h1>Example headline.</h1>
+                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cotainer">
+                    <div><img src="img/elearning-1.png" class="fill img-responsive"></div>
+                    <div class="carousel-caption">
+                        <h1>Another example headline.</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
                     </div>
-
-                    <!-- end block of general setting -->
-
-
-
-
-
-                    <!-- Block of topic setting -->
-                    <div class="topic_setting">
-                        <p>2</p>
-                        <p>2</p>
-                    </div>
-                    <!-- end block of topic setting -->
-                    <!-- Block of comment setting -->
-                    <div class="comment_setting">
-                        <p>3</p>
-                        <p>3</p>
-                    </div>
-                    <!-- end block of comment setting -->
-                    <!-- Block of categories setting -->
-                    <div class="categories_setting">
-                        <p>4</p>
-                        <p>4</p>
-                    </div>
-                    <!-- end block of categories setting -->
-                    <!-- end forums manage -->
-
+                </div>
+            </div>
+            <div class="item active">
+                <div><img src="img/elearning.png" class="fill img-responsive"></div>
+                <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
                 </div>
             </div>
         </div>
-
+        <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
+    <!--Banner-->
+    <!-- <div class="jumbotron">
+        <div class="container text-center">
+            <h1>Welcome To HRD Center</h1>
+            <p>This is the place where you can learn as much as you want.</p>
+            <div class="btn-group">
+                <a href="" class="btn btn-lg btn-success">Getting Start Now</a>
+                <a href="" class="btn btn-lg btn-default">Try It Now</a>
+            </div>
+        </div>
+       
+    </div> -->
+    <!--end of jumbotron-->
+    <div class="container">
+        <div class="page-header">
+            <h2>HRD Center <small>the number one of IT Center in cambodia</small></h2>
+        </div>
+        <!--end page header-->
+        <br>
+        <br>
+        <br>
+        <h2 class="text-center">Most Popular</h2>
+        <hr>
+        <div class="row">
+            <ul class="list-inline">
+                <li class="col-md-3">
+                    <div class="panel panel-default">
+                        <a href="#"><img class="img-responsive center-block" src="img\head_first_java_second_edition.jpg"></img>
+                        </a>
+                        <h4 class="text-center"><a href="#"> Head First JAVA </a></h4>
+                        <p>Head First Java delivers a highly interactive, multisensory learning experience that lets new programmers pick up the fundamentals of the Java language quickly.</p>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="panel panel-default">
+                        <a href="#"><img class="img-responsive center-block" src="img\head_first_servlets_and_jsp_2nd_edition.jpg"></img>
+                        </a>
+                        <h4 class="text-center"><a href="#">Head First Servlets and JSP</a></h4>
+                        <p>Learn how to write servlets and JSPs, what makes a web container tick (and what ticks it off), how to use JSP's Expression Language (EL for short), and how to write deployment.</p>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="panel panel-default">
+                        <a href="#"><img class="img-responsive center-block" src="img\head_first_ajax.jpg"></img>
+                        </a>
+                        <h4 class="text-center"><a href="#">Head First Ajax</a></h4>
+                        <p class="text-justify"> Scheduled to begin July 14, 2014, Social Psychology will feature a fresh line-up of special events, guest experts, and material intended to delight psychology lovers around the world. </p>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="panel panel-default">
+                        <a href="#"><img class="img-responsive center-block" src="img\head_first_mobile_web.jpg"></img>
+                        </a>
+                        <h4 class="text-center"><a href="#">Head First Mobile Web</a></h4>
+                        <p class="text-justify"> Mobile web usage is exploding. Soon, more web browsing will take place on phones and tablets than PCs. Your business needs a mobile strategy, but where do you start?</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2 class="text-center">Latest Recommendation</h2>
+        <hr>
+        <div class="row">
+            <ul class="list-inline">
+                <li class="col-md-3">
+                    <div class="panel panel-default">
+                        <a href="#"><img class="img-responsive center-block" src="img\head_first_jquery.jpg"></img>
+                        </a>
+                        <h4 class="text-center"><a href="#">Head First jQuery</a></h4>
+                        <p class="text-justify">By the time you've completed the book, you'll be incorporating Ajax apps, working seamlessly with HTML and CSS, and handling data with PHP, MySQL and JSON.</p>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="panel panel-default">
+                        <a href="#"><img class="img-responsive center-block" src="img\head_first_javascript.jpg"></img>
+                        </a>
+                        <h4 class="text-center"><a href="#">Head First JavaScript</a></h4>
+                        <p class="text-justify">JavaScript. Head First JavaScript is your ticket to going beyond copying and pasting the code from someone else's web site, and writing your own interactive web pages.</p>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="panel panel-default">
+                        <a href="#"><img class="img-responsive center-block" src="img\head_first_c_second_edition.jpg"></img>
+                        </a>
+                        <h4 class="text-center"><a href="#">Head First C#</a></h4>
+                        <p class="text-justify">Head First C# introduces this language in a fun, visual way. You'll quickly learn everything from creating your first program to learning sophisticated coding skills.</p>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="panel panel-default">
+                        <a href="#"><img class="img-responsive center-block" src="img\head_first_programming.jpg"></img>
+                        </a>
+                        <h4 class="text-center"><a href="#"> Head First Programming </a></h4>
+                        <p class="text-justify"> Head First Programming introduces the core concepts of writing computer programs - variables, decisions, loops, functions, and objects applying to programming language. </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <label for="" class="form-control text-center"><a href="course.html">View All Courses</a></label>
+        <br>
+        <br>
+        <br>
     </div>
-    <!-- end content area -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <p>
+                    <h4 class="text-uppercase">about us</h4></p>
+                <blockquote>
+                    <p>Korea Software HRD Center is an IT academy for training SW professionals established by Korea International Cooperation Agency (KOICA) and Webcash Co., Ltd in April, 2013. Our mission is to train SW experts, provide job opportunities for them, and improve SW technologies in Cambodia.</p>
+                    <footer>HRD Article Management</footer>
+                </blockquote>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    <h4 class="text-uppercase">our goal</h4></p>
+                <blockquote>
+                    <p>We provide the best opportunities for IT major students to become global SW experts with the highest quality training programs. All courses are free of charge. Furthermore, we provide a bridge for graduated students to the global SW job market. Please join our center for a bright future!</p>
+                    <footer>HRD Article Management</footer>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    <h4 class="text-uppercase">contact us</h4></p>
+                <blockquote>
+                    <!-- <pre>  
+                    <p class="text-left"> -->
+                    <!-- <strong>Address    :</strong> #12, St 323, Sangkat Boeung Kak II,KhanToul Kork, Phnom Penh, Cambodia.
+                    <strong>Tel     :</strong> (855)23 99 13 14 
+                                               (855)77 77 12 36 (Khmer, English) 
+                                               (855)15 4 5555 2 (Khmer, English) 
+                                               (855)17 52 81 69(Korean, English)
+                    <strong>Email   :</strong> info.kshrd@gmail.com
+                                               phirum.gm@gmail.com 
+                    </pre> -->
+                    <dl>
+                        <dt>Address:</dt>
+                        <dl>#12, St 323, Sangkat Boeung Kak II,KhanToul Kork, Phnom Penh, Cambodia. </dl>
+                        <dt>Tel:</dt>
+                        <dl>(855)23 99 13 14 </dl>
+                        <dt>Email:</dt>
+                        info.kshrd@gmail.com </dl>
+                    </dl>
+                    <!-- </p> -->
+                    <footer>HRD Article Management</footer>
+                </blockquote>
+            </div>
+        </div>
+        <!--end row-->
     </div>
-    </div>
-    <!-- JQuery Coding -->
+    <!--end container-->
+    <!--nav footer-->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <p class="text-center">&copy;&nbsp;Copy Right 2015.
+                <br>All Right Reserved.</p>
+        </div>
+    </nav>
+    <!--end footer-->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
