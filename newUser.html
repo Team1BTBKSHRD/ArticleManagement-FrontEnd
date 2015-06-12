@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/index-grid.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/old.css">
+  <script src="js/jquery-min.js"></script>
+</head>
+<body class="body page-index clearfix">
+  <div class="my-wrapper">
+    <div class="my-header clearfix">
+      <div class="my-web-brand">
+       <a href="#"><img src="img/Site-Logo-text.png"><span>Dashboard</span></a>
+      </div>
+      <div class="my-menu-btn ">
+        <a href="#"><i class="fa fa-bars"></i> Menu</a>
+      </div>
+      <div class="my-header-content">
+        <div class="my-header-message">
+          <a href="#">
+          <i class="fa fa-envelope icon-margin-right"></i> Messages
+          </a>
+        </div>
+        <div class="my-header-logout">
+          <a href="#">
+          <i class="fa fa-sign-out icon-margin-right"></i> Logout
+          </a>
+        </div>
+      </div>
+      <div class="my-navbar-side">
+        <!-- navbar-side-list-->
+        <ul>
+            <a href="#"><li><i class="fa fa-user icon-margin-right"></i> Users</li></a>
+            <a href="#"><li><i class="fa fa-book icon-margin-right"></i> Articles</li></a>
+            <a href="#"><li><i class="fa fa-users icon-margin-right"></i> Forums</li></a>
+        </ul>
+        <!--end navbar-side-list-->
+        </div>
+    </div>
+    <div class="my-body clearfix">
+      <div class="my-navbar-side-background"></div>
+      <!-- content area-->
+
+      <div id="main" class="container-fluid" style="margin-left: 250px;">
+      <div class="col-sm-11 center-block">
+        <div class="col-sm-12 card-big"> 
+          <h1>Add New Backend User</h1>
+          <hr>     
+          <div class="col-sm-3" style="margin-top: 5%;">
+            <div class="text-center">
+              <img src="img/100.png" class="img-thumbnail" alt="avatar">       
+              <input type="file" id="hiddenFileInput" style="visibility:hidden">
+              <input type="button" value="Upload a photo..." class="form-control upload-margin" onclick="$('#hiddenFileInput').click();" />
+            </div>
+          </div>
+          <div class="col-sm-9">              
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label class="col-sm-4 control-label">First name:</label>
+                <div class="col-sm-8">
+                  <input class="form-control" type="text" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Last name:</label>
+                <div class="col-sm-8">
+                  <input class="form-control" type="text" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Email:</label>
+                <div class="col-sm-8">
+                  <input class="form-control" type="text" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Role:</label>
+                <div class="col-sm-8">
+                  <input class="form-control" type="text" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Password:</label>
+                <div class="col-sm-8">
+                  <input class="form-control" type="password" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Confirm password:</label>
+                <div class="col-sm-8">
+                  <input class="form-control" type="password" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label"></label>
+                <div class="col-sm-8">
+                  <input type="button" class="btn btn-primary" value="Save Changes">
+                  <span></span>
+                  <input type="reset" class="btn btn-default pull-right" value="Cancel">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>      
+    </div>
+      <!-- end content area -->
+    </div>
+  </div>
+</body>
+</html>
