@@ -1,4 +1,7 @@
 # ArticleManagementWithJS
-Aritcle Management
-Merging Back End and Front End User Interface Using 
-HTML CSS JS JQuery
+Front End Aritcle Management Using 
+HTML
+CSS
+JS
+JQuery 
+and shits
