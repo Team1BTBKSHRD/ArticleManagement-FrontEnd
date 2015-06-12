@@ -1,7 +1,9 @@
 # ArticleManagementWithJS
-Front End Aritcle Management Using 
+Front End and Back End Interface 
+Aritcle Management  
 HTML
 CSS
 JS
 JQuery 
-and shits
+
+

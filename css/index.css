@@ -192,7 +192,7 @@ body {
     height: auto;
     position: relative;
     text-align: right;
-}
+  }
 
   .my-header .my-navbar-side {
     position: relative;
@@ -204,9 +204,9 @@ body {
     width: 100%;
   }
 
-.my-header-content{
-    margin-right: 0px;   
-}
+  .my-header-content{
+      margin-right: 0px;   
+  }
 
   .my-header .my-web-brand {
     position: relative;
@@ -216,16 +216,31 @@ body {
   .my-wrapper .my-header {
     height: auto;
   }
-.my-navbar-side > ul > a > li{
-    text-indent: 0px;
-    padding-left: 45%;
+  .my-navbar-side > ul > a > li{
+      text-indent: 0px;
+      padding-left: 45%;
+  }
+  .my-header-content{
+      display: none;
+  }
+  .my-header{
+      position: relative;   
+  }
 }
-.my-header-content{
-    display: none;
+.card-big{
+  margin: 2%; 
 }
-.my-header{
-    position: relative;   
+.card-big hr{
+
+  border-top: 3px solid #eeeeee;
 }
-  
-  
+.center-block {float: none !important}
+.pagination li a{
+  color: black ! important;
+}
+.search{
+  margin-bottom: 20px;
+}
+.search, .col-sm-4, .col-sm-8{
+  padding: 0 ! important;
 }

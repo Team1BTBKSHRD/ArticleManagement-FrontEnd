@@ -56,7 +56,7 @@
       <div class="content-area center-block">
         <div class="col-sm-11 card-big"> 
           <form method="get" action="back-end-user-manage.html" class="form-horizontal" id="form-signup">
-              <h1>Add New User</h1>
+              <h1>Edit User Information</h1>
               <hr>     
               <div class="page-header">
                   <h3>General Information</h3>
@@ -64,12 +64,12 @@
               <div class="form-group">
                   <label for="firstName" class="col-sm-3">First Name:</label>
                   <div class="col-sm-9">
-                      <input type="text" class="form-control" name="firstname" placeholder="Enter First Name"> </div>
+                      <input type="text" class="form-control" name="firstname" placeholder="Enter First Name" value="Chhorn"> </div>
               </div>
               <div class="form-group">
                   <label for="LastName" class="col-sm-3">Last Name:</label>
                   <div class="col-sm-9">
-                      <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name"> </div>
+                      <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name" value="Elit"> </div>
               </div>
               <div class="form-group">
                   <label for="firstName" class="col-sm-3">Gender:</label>
@@ -103,22 +103,22 @@
               <div class="form-group">
                   <label for="City" class="col-sm-3">City/Town: </label>
                   <div class="col-sm-9">
-                      <input type="text" name="city" class="form-control" placeholder="Enter City/Town"> </div>
+                      <input type="text" name="city" class="form-control" placeholder="Enter City/Town" value="Phnom Pehn"> </div>
               </div>
               <div class="form-group">
                   <label for="firstName" class="col-sm-3">Email:</label>
                   <div class="col-sm-9">
-                      <input type="text" name="email" class="form-control" placeholder="example@mail.com"> </div>
+                      <input type="text" name="email" class="form-control" placeholder="example@mail.com" value="chhornelit@gmail.com"> </div>
               </div>
               <div class="form-group">
                   <label for="firstName" class="col-sm-3">Mobile Phone:</label>
                   <div class="col-sm-9">
-                      <input type="text" class="form-control" name="mobilephone" placeholder="012345678"> </div>
+                      <input type="text" class="form-control" name="mobilephone" placeholder="012345678" value="086823938"> </div>
               </div>
               <div class="form-group">
                   <label for="firstName" class="col-sm-3">Address:</label>
                   <div class="col-sm-9">
-                      <textarea class="form-control" rows="3" name="address" placeholder="Enter Your Address"></textarea>
+                      <textarea class="form-control" rows="3" name="address" placeholder="Enter Your Address">Somewhere in PP</textarea>
                   </div>
               </div>
               <div class="page-header">
@@ -127,38 +127,38 @@
               <div class="form-group">
                   <label for="website" class="col-sm-3">Website:</label>
                   <div class="col-sm-9">
-                      <input type="text" class="form-control" name="website" placeholder="Enter your Website Name"> </div>
+                      <input type="text" class="form-control" name="website" placeholder="Enter your Website Name" value="www.kshrd.com.kh"> </div>
               </div>
               <div class="form-group">
                   <label for="skype" class="col-sm-3">Skype ID:</label>
                   <div class="col-sm-9">
-                      <input type="text" class="form-control" name="skype" placeholder="Enter your Skype ID"> </div>
+                      <input type="text" class="form-control" name="skype" placeholder="Enter your Skype ID" value="elit69"> </div>
               </div>
               <div class="form-group">
                   <label for="firstName" class="col-sm-3">Facebook ID:</label>
                   <div class="col-sm-9">
-                      <input type="text" class="form-control" name="facebook" placeholder="Enter Facebook ID"> </div>
+                      <input type="text" class="form-control" name="facebook" placeholder="Enter Facebook ID" value="Elit Chhorn"> </div>
               </div>
               <div class="form-group">
                   <label for="firstName" class="col-sm-3">Gmail ID:</label>
                   <div class="col-sm-9">
-                      <input type="text" class="form-control" name="gmail" placeholder="Enter Gmail ID">
+                      <input type="text" class="form-control" name="gmail" placeholder="Enter Gmail ID" value="chhornelit@gmail.com">
                   </div>
               </div>
               <div class="form-group">
                   <label class="col-sm-3">Occupation:</label>
                   <div class="col-sm-9">
-                      <input type="text" class="form-control" name="Occupation" placeholder="Enter your Occupation"> </div>
+                      <input type="text" class="form-control" name="position" placeholder="Enter your Occupation" value="Student"> </div>
               </div>
               <div class="form-group">
                   <label class="col-sm-3">Institute:</label>
                   <div class="col-sm-9">
-                      <input type="text" class="form-control" name="institute" placeholder="Enter your institute"> </div>
+                      <input type="text" class="form-control" name="institute" placeholder="Enter your institute" value="KSHRD"> </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-3 control-label"></label>
                 <div class="col-sm-9">
-                  <button type="submit" class="btn btn-primary" style="width:200px;">Add New User</button>
+                  <button type="submit" class="btn btn-primary" style="width:200px;">Save Changes</button>
                   <span></span>
                   <input type="reset" class="btn btn-default pull-right" value="Back" onclick="location.href='back-end-user-manage.html'">
                 </div>
@@ -169,79 +169,79 @@
     </div>
     <script>
       $(document).ready(function() {
-        $('#form-signup').bootstrapValidator({
-        //excluded: [':disabled'],
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            firstname: {
-                validators: {
-                    notEmpty: {
-                        message: 'The firstname is required'
-                    }
-                }
-            },
-            lastname: {
-                validators: {
-                    notEmpty: {
-                        message: 'The lastname is required'
-                    }
-                }
-            },
-            gender: {
-                validators: {
-                    notEmpty: {
-                        message: 'Gender is required'
-                    }
-                }
-            },
-            country: {
-                validators: {
-                    notEmpty: {
-                        message: 'Country required'
-                    }
-                }
-            },
-            city: {
-                validators: {
-                    notEmpty: {
-                        message: 'City required'
-                    }
-                }
-            },
-            mobilephone: {
-                validators: {
-                    notEmpty: {
-                        message: 'Mobile phone required'
-                    },
-                    regexp: {
-                        regexp: /^[1]?[0-9]\d{8}$/,
-                        message: '9 Digits only, and start with 0'
-                    }
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'Email required'
-                    },
-                    emailAddress: {
-                        message: 'The value is not a valid email address'
-                    }
-                }
-            },
-            address: {
-                validators: {
-                    notEmpty: {
-                        message: 'Address required'
-                    }
-                }
-            }
-          }
-        })
+              $('#form-signup').bootstrapValidator({
+                  //excluded: [':disabled'],
+                  feedbackIcons: {
+                      valid: 'glyphicon glyphicon-ok',
+                      invalid: 'glyphicon glyphicon-remove',
+                      validating: 'glyphicon glyphicon-refresh'
+                  },
+                  fields: {
+                      firstname: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'The firstname is required'
+                              }
+                          }
+                      },
+                      lastname: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'The lastname is required'
+                              }
+                          }
+                      },
+                      gender: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'Gender is required'
+                              }
+                          }
+                      },
+                      country: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'Country required'
+                              }
+                          }
+                      },
+                      city: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'City required'
+                              }
+                          }
+                      },
+                      mobilephone: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'Mobile phone required'
+                              },
+                              regexp: {
+                                  regexp: /^[1]?[0-9]\d{8}$/,
+                                  message: '9 Digits only, and start with 0'
+                              }
+                          }
+                      },
+                      email: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'Email required'
+                              },
+                              emailAddress: {
+                                  message: 'The value is not a valid email address'
+                              }
+                          }
+                      },
+                      address: {
+                          validators: {
+                              notEmpty: {
+                                  message: 'Address required'
+                              }
+                          }
+                      }
+                  }
+              })
       });
     </script>
     </div>
