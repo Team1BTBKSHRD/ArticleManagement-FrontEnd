@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="author" content="Hem Sarin">
+  <meta charset="UTF-8">
+  <meta lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Title and Icon -->
+  <title>HRD Article Management</title>
+  <link rel="icon" href="../img/logo.png" type="img/png" />  
+  <!-- End Title and Icon -->
+
+  <!-- CSS Library -->
+  <link rel="stylesheet" href="../css/lib/standardize.css">
+  <link rel="stylesheet" href="../css/lib/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/lib/font-awesome-4.3.0/css/font-awesome.min.css">
+  <!-- End CSS Library -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/dashboard-style.css">    
+  <link rel="stylesheet" href="../css/navbar-style.css">
+  <!-- End Custom CSS -->
+
+  <!-- Javascript Library -->
+  <script src="../js/lib/jquery-2.1.4.min.js"></script>    
+  <script src="../js/lib/ckeditor/ckeditor.js"></script>
+  <script src="../js/lib/bootstrap.min.js"></script>
+  <script src="../js/lib/bootstrapValidator.min.js"></script>
+  <script src="../js/lib/jquery-ui.js"></script>
+  <!-- End Javascript Library -->
+  
+  <!-- Custom Javascript -->
+  <script src="../js/navbar-sides-script.js"></script>  
+  <script src="../js/navbar-script.js"></script>
+  <script src="../js/bootstrap-validate-category.js"></script>
+  <!-- End Custom Javascript -->
+</head>
+<body class="body page-index clearfix">
+  <div class="my-wrapper">
+    <div class="my-header clearfix">
+      <div class="my-web-brand">
+        <a href="dashboard.html"><img src="../img/Site-Logo-text.png"><span>Dashboard</span></a>
+      </div>
+      <div class="my-menu-btn ">
+        <a id="menu" href="#"><i class="fa fa-bars"></i> Menu</a>
+      </div>
+      <div class="my-header-content">
+        <div class="my-header-message">
+          <a href="#"> <i class="fa fa-envelope icon-margin-right"></i> Messages
+          </a>
+        </div>
+        <div class="my-header-logout">
+          <a href="#"> <i class="fa fa-sign-out icon-margin-right"></i> Logout
+          </a>
+        </div>
+      </div>
+      <div class="my-navbar-side" id="cssmenu">
+        <!-- navbar-side-list-->
+        <ul>
+          <li class="has-sub"><a href='#'><span><i class="fa fa-user icon-margin-right"></i>Users</span></a>
+            <ul>
+              <li><a href='back-end-user-add-new.html'><span>Add User</span></a></li>
+              <li><a href='back-end-user-manage.html'><span>Manage User</span></a></li>
+            </ul>                 
+          </li>
+          <li class='has-sub'><a href='#'><span><i class="fa fa-book icon-margin-right"></i>Articles</span></a>
+            <ul>
+              <li><a href='article_add.html'><span>Add Article</span></a></li>
+              <li><a href='category_add.html'><span>Add Category</span></a></li>
+            </ul>
+          </li>
+          <li class="last"><a href='forum_manage.html'><span><i class="fa fa-users icon-margin-right"></i>Forums</span></a></li>
+        </ul>         
+        <!--end navbar-side-list-->
+      </div>
+    </div>
+    <div class="my-body clearfix">
+      <div class="my-navbar-side-background"></div>
+      <!-- content area-->
+      <div id="main" class="container-fluid" >
+        <div class="content-area">
+          <div class="col-sm-11 form-wrapper"> 
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="page-title">
+                  <h1>
+                    Add New Category
+                  </h1>
+                  <ol class="breadcrumb">
+                    <li class="active"><i class="fa fa-dashboard"></i> Add New Category</li>
+                    <li class="active" >  
+                      <button  class="btn btn-primary" onclick="location.href='category_search.html'"  >
+                      <i class="fa fa-edit"></i>&nbsp;&nbsp;Search
+                      </button> 
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <!--End Breadcrumb and Page title -->
+            <!-- inner content area-->
+            <div class="row">              
+              <ol class="breadcrumb">
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                        <form role="form" id="addarticle">
+                            <div class="form-group">
+                                <label>Category ID:</label>
+                                <input type="text" class="form-control" name="cate_id" id="cate_id" placeholder="100" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label>Category Title:</label>
+                                <input type="text" class="form-control" name="cate_title" id="cate_title" placeholder="Category title">
+                            </div>
+                             <div class="form-group">
+                                <label>Alias:</label>
+                                <input type="text" class="form-control" name="cate_alias" id="cate_alias" placeholder="alias">
+                            </div>
+                            <div class="form-group">
+                                <label>Publish Date:</label>
+                                <input type="date" class="form-control" name="cate_date" id="cate_date">
+                            </div>
+                            <div class="form-group">
+                                <label>Description:</label>
+                                <textarea class="ckeditor" name="cate_description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-default" >Submit</button>
+                            </div>
+                        </form>                                    
+                    </div>
+                  </div>
+               </ol>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+</body>
+</html>

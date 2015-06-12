@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="icon" href="img/logo.png" type="img/png" />
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -44,6 +44,7 @@
                 <a href="#" class="navbar-brand">HRD Article Management </a>
             </div>
             <!--end navbar header-->
+            <!-- list nav-menu -->
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Home</a></li>
@@ -52,14 +53,18 @@
                     <li class="active"><a href="login.html">Login</a></li>
                 </ul>
             </div>
+            <!-- end nav-menu -->
             <!--end collapse-->
         </div>
         <!--end container-->
     </nav>
+    <!-- end of navbar -->
     <div class="container">
+        <!-- redirect to index form -->
         <form action="index.html" id="loginForm" method="post" role="form">
             <div class="container">
                 <div class="row">
+                    <!-- put image logo in center and align text as center -->
                     <div class="col-md-4 col-md-offset-4 text-center">
                         <img src="img\logohrd.png" alt="HRD Login">
                     </div>
@@ -69,13 +74,13 @@
                     <div class="col-md-4 col-md-offset-4">
                         <div class="form-group">
                             <label for="">User Name :</label>
-                            <input type="text" class="form-control" name="username" placeholder="Input User Name">
+                            <input type="text" class="form-control" name="usernameLogin" placeholder="Input User Name">
                         </div>
                     </div>
                     <div class="col-md-4 col-md-offset-4">
                         <div class="form-group">
                             <label for="">Password :</label>
-                            <input type="password" class="form-control" name="password" placeholder="Input Password">
+                            <input type="password" class="form-control" name="passwordLogin" placeholder="Input Password">
                         </div>
                     </div>
                     <div class="col-md-4 col-md-offset-4">
@@ -90,34 +95,204 @@
                     <div class="col-md-4 col-md-offset-4">
                         <div class="form-group">
                             <label for="">Not yet have account?&nbsp;</label>
-                            <label for=""><a href="sign-up.html">Register Now</a></label>
+                            <!-- call register form -->
+                            <label for=""><a data-toggle="modal" data-target="#editModal">Register Now</a></label>
                         </div>
                     </div>
                     <div class="col-md-4 col-md-offset-4">
+                        <!-- submit form -->
                         <button type="submit" class="btn btn-default">Submit</button>
                     </div>
                 </div>
                 <!--end of row-->
             </div>
+            <!-- end of container -->
         </form>
+        <!-- end of form -->
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-lg">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h2 class="modal-title">Sign Up User </h2>
+                </div>
+                <div class="modal-body">
+                    <!-- The form is placed inside the body of modal -->
+                    <form id="formEdit" method="post" class="form-horizontal" action="index.html">
+                        <h4>&nbsp;&nbsp;&nbsp;<a data-toggle="collapse" href="#generalInformation" style="text-decoration:none"><b>General Information</b></a></h4>
+                        <hr>
+                        <div class="collapse in" id="generalInformation">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="img/user.png" alt="">
+                                    <div class="caption text-center">
+                                        <p>
+                                            <a href="#" class="btn btn-default">Upload Photo</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-3">First Name:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="firstname" placeholder="Enter First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="LastName" class="col-sm-3">Last Name:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-3">Gender:</label>
+                                    <div class="col-sm-9">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="gender" id="radioMale" value="Male"> Male
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="gender" id="radioFemale" value="Female"> Female
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-3">Country:</label>
+                                    <div class="col-sm-9">
+                                        <select name="country" class="form-control" id="selectCountry">
+                                            <option class="active">Cambodia</option>
+                                            <option>Korea</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="City" class="col-sm-3">City/Town: </label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="city" class="form-control" placeholder="Enter City/Town">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-3">Email:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="email" class="form-control" placeholder="example@mail.com">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-3">Mobile Phone:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="mobilephone" placeholder="012345678">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-3">Address:</label>
+                                    <div class="col-sm-9">
+                                        <textarea class="form-control" rows="3" name="address"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>&nbsp;&nbsp;&nbsp;<a data-toggle="collapse" href="#optionalInformation" aria-expanded="false" aria-controls="optionalInformation" style="text-decoration:none"><b>Optional Information</b></a></h4>
+                        <hr>
+                        <div class="collapse" id="optionalInformation">
+                            <div class="form-group">
+                                <label for="websit" class="col-sm-3">Website:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="website" placeholder="Enter your websit"> </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="skype" class="col-sm-3">SkypeID:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="skype" placeholder="Enter your SkypeID"> </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName" class="col-sm-3">FacebookID:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="facebook" placeholder="Enter FacebookID"> </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName" class="col-sm-3">GmailID:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="gmail" placeholder="Enter GmailID">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3">Position:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="position" placeholder="Enter your Postion"> </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3">Institute:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="institute" placeholder="Enter your institute"> </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>&nbsp;&nbsp;&nbsp;<a data-toggle="collapse" href="#userCreate" aria-expanded="false" aria-controls="userCreate" style="text-decoration:none"><b>Create User Account</b></a></h4>
+                        <hr>
+                        <div class="collapse" id="userCreate">
+                            <div class="form-group">
+                                <label class="col-sm-3">User Name:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="username" placeholder="Enter First Name"> </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3">Password:</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" name="password" placeholder="Enter Last Name"> </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3">Confirm Password:</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" name="confirmpassword" placeholder="Enter Last Name"> </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="checkbox col-sm-9">
+                                <label>
+                                    <input type="checkbox" name="confirm">I agree to the E-Learn <a href="#" style="text-decoration:none">Terms of Service</a> and <a href="#" style="text-decoration:none">Privacy Policy</a>.
+                                </label>
+                            </div>
+                        </div>
+                        <!-- button trigger submit form -->
+                        <div class="form-group">
+                            <div class="col-xs-5 col-xs-offset-3">
+                                <button type="submit" class="btn btn-primary">Save Change</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                        <!-- end div btn-submit -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of Modal -->
+    <!-- END OF MODAL -->
     <script>
+    // validation of login form
     $(document).ready(function() {
         $('#loginForm').bootstrapValidator({
+            // if error show these icons
             feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
+                valid: 'glyphicon glyphicon-ok', //show icon ok when user input correctly
+                invalid: 'glyphicon glyphicon-remove', //show icon remove when user input correctly
+                validating: 'glyphicon glyphicon-refresh' //show icon refresh while user inputting
             },
             fields: {
-                username: {
+                usernameLogin: { //validate field username
                     validators: {
-                        notEmpty: {
+                        notEmpty: { //require username input
                             message: 'The username is required'
                         }
                     }
                 },
-                password: {
+                passwordLogin: { //validate field password
                     validators: {
                         notEmpty: {
                             message: 'The password is required'
@@ -126,6 +301,122 @@
                 }
             }
         });
+    });
+    // validators Signup User
+    $(document).ready(function() {
+        $('#formEdit').bootstrapValidator({
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                firstname: { //validation first name fields
+                    validators: {
+                        notEmpty: {
+                            message: 'The firstname is required'
+                        }
+                    }
+                },
+                lastname: { //validation lastname fields
+                    validators: {
+                        notEmpty: {
+                            message: 'The lastname is required'
+                        }
+                    }
+                },
+                gender: { //validation gender fields
+                    validators: {
+                        notEmpty: {
+                            message: 'Gender is required'
+                        }
+                    }
+                },
+                country: { //validation country field
+                    validators: {
+                        notEmpty: {
+                            message: 'Country required'
+                        }
+                    }
+                },
+                city: { //validation city field
+                    validators: {
+                        notEmpty: {
+                            message: 'City required'
+                        }
+                    }
+                },
+                mobilephone: { //validation mobile phone number fields
+                    validators: {
+                        notEmpty: {
+                            message: 'Mobile phone required'
+                        },
+                        regexp: { //use regular expression
+                            regexp: /^[1]?[0-9]\d{8}$/, //require user input like 012345678, number only,and only 9 digits
+                            message: '9 Digits only, and start with 0'
+                        }
+                    }
+                },
+                email: { //validation email field
+                    validators: {
+                        notEmpty: {
+                            message: 'Email required'
+                        },
+                        emailAddress: { //must input like example@gmail.com
+                            message: 'The value is not a valid email address'
+                        }
+                    }
+                },
+                address: { //validation address fields
+                    validators: {
+                        notEmpty: {
+                            message: 'Address required'
+                        }
+                    }
+                },
+                username: { //validation user name field
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        },
+                        stringLength: {
+                            max: 20,
+                            message: "username must be no longer than 20 characters"
+                        }
+                    }
+                },
+                password: { //validation password field
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: { //define number of string input
+                            min: 8, //define min charactor 
+                            message: "Password must be 8 characters long"
+                        }
+                    }
+                },
+                confirmpassword: { //validation confirm password field
+                    validators: {
+                        notEmpty: {
+                            message: 'confirmpassword is required'
+                        },
+                        identical: { //identical from password field
+                            field: "password",
+                            message: "Password and confirmation must match"
+                        }
+                    }
+                },
+                confirm: { //check confirm
+                    validators: {
+                        notEmpty: {
+                            message: 'In order to use our services, you must agree to our Terms of Service.'
+                        }
+                    }
+                }
+
+            }
+        })
     });
     </script>
 </body>

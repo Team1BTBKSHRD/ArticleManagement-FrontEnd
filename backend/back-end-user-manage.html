@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="author" content="Chhorn Elit">
+  <meta charset="UTF-8">
+  <meta lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Title and Icon -->
+  <title>HRD Article Management</title>
+  <link rel="icon" href="../img/logo.png" type="img/png" />  
+  <!-- End Title and Icon -->
+
+  <!-- CSS Library -->
+  <link rel="stylesheet" href="../css/lib/standardize.css">
+  <link rel="stylesheet" href="../css/lib/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/lib/font-awesome-4.3.0/css/font-awesome.min.css">
+  <!-- End CSS Library -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/dashboard-style.css">    
+  <link rel="stylesheet" href="../css/navbar-style.css">
+  <!-- End Custom CSS -->
+
+  <!-- Javascript Library -->
+  <script src="../js/lib/jquery-2.1.4.min.js"></script>    
+  <script src="../js/lib/bootstrap.min.js"></script>
+  <script src="../js/lib/bootstrapValidator.min.js"></script>
+  <script src="../js/lib/jquery-ui.js"></script>
+  <!-- End Javascript Library -->
+  
+  <!-- Custom Javascript -->
+  <script src="../js/navbar-sides-script.js"></script>  
+  <script src="../js/navbar-script.js"></script>
+  <script src="../js/bootstrap-validate-user.js"></script>
+  <script src="../js/delete-table-row.js"></script>
+  <!-- End Custom Javascript -->
+</head>
+<body class="body page-index clearfix">
+  <div class="my-wrapper">
+    <div class="my-header clearfix">
+      <div class="my-web-brand">
+        <a href="dashboard.html"><img src="../img/Site-Logo-text.png"><span>Dashboard</span></a>
+      </div>
+      <div class="my-menu-btn ">
+        <a id="menu" href="#"><i class="fa fa-bars"></i> Menu</a>
+      </div>
+      <div class="my-header-content">
+        <div class="my-header-message">
+          <a href="#"> <i class="fa fa-envelope icon-margin-right"></i> Messages
+          </a>
+        </div>
+        <div class="my-header-logout">
+          <a href="#"> <i class="fa fa-sign-out icon-margin-right"></i> Logout
+          </a>
+        </div>
+      </div>
+      <div class="my-navbar-side" id="cssmenu">
+        <!-- navbar-side-list-->
+        <ul>
+          <li class="has-sub"><a href='#'><span><i class="fa fa-user icon-margin-right"></i>Users</span></a>
+            <ul>
+              <li><a href='back-end-user-add-new.html'><span>Add User</span></a></li>
+              <li><a href='back-end-user-manage.html'><span>Manage User</span></a></li>
+            </ul>                 
+          </li>
+          <li class='has-sub'><a href='#'><span><i class="fa fa-book icon-margin-right"></i>Articles</span></a>
+            <ul>
+              <li><a href='article_add.html'><span>Add Article</span></a></li>
+              <li><a href='category_add.html'><span>Add Category</span></a></li>
+            </ul>
+          </li>
+          <li class="last"><a href='forum_manage.html'><span><i class="fa fa-users icon-margin-right"></i>Forums</span></a></li>
+        </ul>         
+        <!--end navbar-side-list-->
+      </div>
+    </div>
+    <div class="my-body clearfix">
+      <div class="my-navbar-side-background"></div>
+      <!-- content area-->
+      <div id="main" class="container-fluid">
+        <div class="content-area center-block">
+          <div class="col-sm-11 form-wrapper">           
+            <h1>Manage All Users</h1>
+            <hr>
+            <div class="col-sm-12 search">
+              <form role="form">
+                <div class="col-sm-8">
+                  <div class="form-group">                    
+                    <div class="col-sm-2"><label>&nbsp;Search:</label></div>
+                    <div class="input-group">
+                    <input id="searchArticle" type="textbox" placeholder="Article " class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-info" type="button" id="addressSearch">Search</button>
+                    </span>
+                    </div> 
+                  </div>                                            
+                </div> 
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="firstName" class="col-sm-3">Type:</label>
+                    <div class="col-sm-9">
+                      <select name="Type" class="form-control" id="selectSearchType">
+                        <option class="active">Name</option>
+                        <option>Email</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>               
+                </div>               
+              </form>             
+            </div>
+
+            <table class="table table-striped table-bordered table-hover table-condensed">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Online?</th>
+                  <th>Status</th>
+                  <th>Sign Up Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="myrow">
+                <tr>
+                  <td>100</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                  <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>101</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>102</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>103</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr> 
+                <tr>
+                  <td>104</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>105</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>106</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>107</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>                                                                                                               
+                <tr>
+                  <td>108</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>109</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>110</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>111</td>
+                  <td>Chhorn Elit</td>
+                  <td>chhornelit@gmail.com</td>                  
+                  <td>Yes</td>
+                                    <td>
+                    <div class="form-group-sm">
+                      <select name="status" class="form-control" id="selectUserStatus">
+                        <option class="active">Active</option>
+                        <option>Inactive</option>
+                      </select>                    
+                    </div>  
+                  </td>
+                  <td>11/06/2015</td>
+                  <td> 
+                     <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" onclick="location.href='back-end-edit-user.html'">
+                      <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;View
+                    </button>
+                    <button  class="btn btn-danger btn-xs delete" >
+                    <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                    </button> 
+                  </td>
+                </tr>                                                                
+              </tbody>                
+            </table> 
+            <div class="col-sm-5  center-block">
+              <nav>
+                <ul class="pagination " style="color:black;">
+                  <li><a href="#" aria-label="Previous"><span aria-hidden="true">« Previous</span></a></li>
+                  <li><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>   
+                  <li><a href="#">...</a></li>
+                  <li><a href="#" aria-label="Next"><span aria-hidden="true">Next »</span></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>   
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

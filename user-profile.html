@@ -7,9 +7,9 @@
     <meta lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrapValidator.min.js"></script>
@@ -63,11 +63,11 @@
     <!-- User Content -->
     <div class="container">
         <div class="page-header">
-            <h2>Welcome!!!</h2></div>
+            <h2><b>Welcome!!!</b></h2></div>
         <div class="col-md-3">
             <div class="panel panel-default">
-                <h4 class="text-center">Logged user as</h4>
-                <a href="#"><img class="img-responsive center-block img-circle" src="img\head_first_java_second_edition.jpg"></img>
+                <h4 class="text-center"><b>Logged user as</b></h4>
+                <a href="#"><img class="img-responsive center-block" src="img/100.png"></img>
                 </a>
                 <br>
                 <table class="table">
@@ -88,9 +88,10 @@
                 </table>
             </div>
             <hr>
-            <div class="panel panel-default text-center">
-                <h4>Profile Setting</h4>
-                <a data-toggle="modal" data-target="#editModal">Edit Profile</a>
+            <div class="panel panel-default">
+                <h4 class="text-center"><b>Profile Setting</b></h4>
+                <br> &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-edit"></span>
+                <a data-toggle="modal" data-target="#editModal" style="text-decoration:none"><b>Edit Profile</b></a>
                 <br>
                 <br>
             </div>
@@ -164,16 +165,20 @@
     </div>
     <!-- Modal -->
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+        <!-- large modal -->
         <div class="modal-dialog modal-lg">
             <div class="modal-content modal-lg">
+                <!-- modal header -->
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h2 class="modal-title">Edit User Profile</h2>
                 </div>
+                <!-- end modal header -->
+                <!-- modal body -->
                 <div class="modal-body">
-                    <!-- The form is placed inside the body of modal -->
+                    <!-- form edit user -->
                     <form id="formEdit" method="post" class="form-horizontal">
                         <h4><b>Genderal Information</b></h4>
                         <hr>
@@ -275,15 +280,17 @@
                             </div>
                         </div>
                     </form>
+                    <!-- end of form -->
                 </div>
+                <!-- end modal body -->
             </div>
         </div>
     </div>
     <!-- end of Modal -->
+    <!-- script validation edit user -->
     <script>
     $(document).ready(function() {
         $('#formEdit').bootstrapValidator({
-            //excluded: [':disabled'],
             feedbackIcons: {
                 valid: 'glyphicon glyphicon-ok',
                 invalid: 'glyphicon glyphicon-remove',

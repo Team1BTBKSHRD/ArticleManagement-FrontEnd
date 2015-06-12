@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="author" content="Rours Channa">
+  <meta charset="UTF-8">
+  <meta lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Title and Icon -->
+  <title>HRD Article Management</title>
+  <link rel="icon" href="../img/logo.png" type="img/png" />  
+  <!-- End Title and Icon -->
+
+  <!-- CSS Library -->
+  <link rel="stylesheet" href="../css/lib/standardize.css">
+  <link rel="stylesheet" href="../css/lib/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/lib/font-awesome-4.3.0/css/font-awesome.min.css">
+  <!-- End CSS Library -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/dashboard-style.css">    
+  <link rel="stylesheet" href="../css/dashboard-home-style.css">    
+  <link rel="stylesheet" href="../css/navbar-style.css">
+  <!-- End Custom CSS -->
+
+  <!-- Javascript Library -->
+  <script src="../js/lib/jquery-2.1.4.min.js"></script>    
+  <script src="../js/lib/ckeditor/ckeditor.js"></script>
+  <script src="../js/lib/bootstrap.min.js"></script>
+  <script src="../js/lib/bootstrapValidator.min.js"></script>
+  <script src="../js/lib/jquery-ui.js"></script>
+  <!-- End Javascript Library -->
+  
+  <!-- Custom Javascript -->
+  <script src="../js/navbar-sides-script.js"></script>  
+  <script src="../js/navbar-script.js"></script>
+  <!-- End Custom Javascript -->
+</head>
+<body class="body page-index clearfix">
+  <div class="my-wrapper">
+    <div class="my-header clearfix">
+      <div class="my-web-brand">
+        <a href="dashboard.html"><img src="../img/Site-Logo-text.png"><span>Dashboard</span></a>
+      </div>
+      <div class="my-menu-btn ">
+        <a id="menu" href="#"><i class="fa fa-bars"></i> Menu</a>
+      </div>
+      <div class="my-header-content">
+        <div class="my-header-message">
+          <a href="#"> <i class="fa fa-envelope icon-margin-right"></i> Messages
+          </a>
+        </div>
+        <div class="my-header-logout">
+          <a href="#"> <i class="fa fa-sign-out icon-margin-right"></i> Logout
+          </a>
+        </div>
+      </div>
+      <div class="my-navbar-side" id="cssmenu">
+        <!-- navbar-side-list-->
+        <ul>
+          <li class="has-sub"><a href='#'><span><i class="fa fa-user icon-margin-right"></i>Users</span></a>
+            <ul>
+              <li><a href='back-end-user-add-new.html'><span>Add User</span></a></li>
+              <li><a href='back-end-user-manage.html'><span>Manage User</span></a></li>
+            </ul>                 
+          </li>
+          <li class='has-sub'><a href='#'><span><i class="fa fa-book icon-margin-right"></i>Articles</span></a>
+            <ul>
+              <li><a href='article_add.html'><span>Add Article</span></a></li>
+              <li><a href='category_add.html'><span>Add Category</span></a></li>
+            </ul>
+          </li>
+          <li class="last"><a href='forum_manage.html'><span><i class="fa fa-users icon-margin-right"></i>Forums</span></a></li>
+        </ul>         
+        <!--end navbar-side-list-->
+      </div>
+    </div>
+    <div class="my-body clearfix">
+      <div class="my-navbar-side-background"></div>
+      <!-- content area-->
+      <div id="main" class="container-fluid" >
+        <div class="content-area">
+          <div class="col-sm-11 form-wrapper"> 
+            <!-- Breadcrumb and Page title -->
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="page-title">
+                  <h1>
+                    Article Management
+                  </h1>
+                  <ol class="breadcrumb">
+                    <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <!--End Breadcrumb and Page title -->
+            <!-- inner content area-->
+            <div class="row">
+              <!-- user -->
+              <div class="col-lg-4 col-sm-6 col-xs-12 row-margin-buttom">
+                <div class="box-title-block dark-yellow">
+                  <div class="box-title">User</div>
+                  <div class="box-description">
+                    <span>999 </span><i class="fa fa-bar-chart"></i>
+                  </div>
+                  <div class="box-footer"><a href="back-end-user-manage.html">More info <i class="fa fa-caret-square-o-right"></i></a></div>
+                </div>
+              </div>
+              <!-- end user -->
+              <!-- Article -->
+              <div class="col-lg-4 col-sm-6 col-xs-12 row-margin-buttom">
+                <div class="box-title-block dark-green">
+                  <div class="box-title">Article</div>
+                  <div class="box-description">
+                    <span>999 </span><i class="fa fa-book"></i></i>
+                  </div>
+                  <div class="box-footer">
+                    <a href="article_search.html">More info <i class="fa fa-caret-square-o-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- end Article -->
+              <!-- Forums -->
+              <div class="col-lg-4 col-sm-6 col-xs-12 row-margin-buttom">
+                <div class="box-title-block dark-orange">
+                  <div class="box-title">Forum</div>
+                  <div class="box-description">
+                    <span>999 </span><i class="fa fa-comment"></i></i>
+                  </div>
+                  <div class="box-footer"><a href="forum_manage.html">More info <i class="fa fa-caret-square-o-right"></i></a></div>
+                </div>
+              </div>
+              <!-- end Forums -->
+            </div>
+            <!-- End inner content area-->
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+</body>
+</html>

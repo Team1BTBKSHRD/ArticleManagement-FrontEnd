@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="author" content="Chhorn Elit">
+  <meta charset="UTF-8">
+  <meta lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Title and Icon -->
+  <title>HRD Article Management</title>
+  <link rel="icon" href="../img/logo.png" type="img/png" />  
+  <!-- End Title and Icon -->
+
+  <!-- CSS Library -->
+  <link rel="stylesheet" href="../css/lib/standardize.css">
+  <link rel="stylesheet" href="../css/lib/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/lib/font-awesome-4.3.0/css/font-awesome.min.css">
+  <!-- End CSS Library -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/dashboard-style.css">    
+  <link rel="stylesheet" href="../css/navbar-style.css">
+  <!-- End Custom CSS -->
+
+  <!-- Javascript Library -->
+  <script src="../js/lib/jquery-2.1.4.min.js"></script>    
+  <script src="../js/lib/bootstrap.min.js"></script>
+  <script src="../js/lib/bootstrapValidator.min.js"></script>
+  <script src="../js/lib/jquery-ui.js"></script>
+  <!-- End Javascript Library -->
+  
+  <!-- Custom Javascript -->
+  <script src="../js/navbar-sides-script.js"></script>  
+  <script src="../js/navbar-script.js"></script>
+  <script src="../js/bootstrap-validate-user.js"></script>
+  <!-- End Custom Javascript -->
+</head>
+<body class="body page-index clearfix">
+  <div class="my-wrapper">
+    <div class="my-header clearfix">
+      <div class="my-web-brand">
+        <a href="dashboard.html"><img src="../img/Site-Logo-text.png"><span>Dashboard</span></a>
+      </div>
+      <div class="my-menu-btn ">
+        <a id="menu" href="#"><i class="fa fa-bars"></i> Menu</a>
+      </div>
+      <div class="my-header-content">
+        <div class="my-header-message">
+          <a href="#"> <i class="fa fa-envelope icon-margin-right"></i> Messages
+          </a>
+        </div>
+        <div class="my-header-logout">
+          <a href="#"> <i class="fa fa-sign-out icon-margin-right"></i> Logout
+          </a>
+        </div>
+      </div>
+      <div class="my-navbar-side" id="cssmenu">
+        <!-- navbar-side-list-->
+        <ul>
+          <li class="has-sub"><a href='#'><span><i class="fa fa-user icon-margin-right"></i>Users</span></a>
+            <ul>
+              <li><a href='back-end-user-add-new.html'><span>Add User</span></a></li>
+              <li><a href='back-end-user-manage.html'><span>Manage User</span></a></li>
+            </ul>                 
+          </li>
+          <li class='has-sub'><a href='#'><span><i class="fa fa-book icon-margin-right"></i>Articles</span></a>
+            <ul>
+              <li><a href='article_add.html'><span>Add Article</span></a></li>
+              <li><a href='category_add.html'><span>Add Category</span></a></li>
+            </ul>
+          </li>
+          <li class="last"><a href='forum_manage.html'><span><i class="fa fa-users icon-margin-right"></i>Forums</span></a></li>
+        </ul>         
+        <!--end navbar-side-list-->
+      </div>
+    </div>
+    <div class="my-body clearfix">
+      <div class="my-navbar-side-background"></div>
+      <!-- content area-->
+      <div id="main" class="container-fluid" >
+        <div class="content-area center-block">
+          <div class="col-sm-11 form-wrapper"> 
+            <form method="get" action="back-end-user-manage.html" class="form-horizontal" id="form-signup">
+                <h1>Edit User Information</h1>
+                <hr>     
+                <div class="page-header">
+                    <h3>General Information</h3>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3">First Name:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="firstname" placeholder="Enter First Name" value="Chhorn"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="LastName" class="col-sm-3">Last Name:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name" value="Elit"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3">Gender:</label>
+                    <div class="col-sm-9">
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" id="radioMale" value="Male" checked> Male </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" id="radioFemale" value="Female"> Female </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3">Country:</label>
+                    <div class="col-sm-9">
+                        <select name="country" class="form-control" id="selectCountry">
+                            <option class="active">Cambodia</option>
+                            <option>Korea</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3">User Role:</label>
+                    <div class="col-sm-9">
+                        <select name="country" class="form-control" id="selectCountry">
+                            <option class="active">Admin</option>
+                            <option>Author</option>
+                            <option>Normal User</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="City" class="col-sm-3">City/Town: </label>
+                    <div class="col-sm-9">
+                        <input type="text" name="city" class="form-control" placeholder="Enter City/Town" value="Phnom Pehn"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3">Email:</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="email" class="form-control" placeholder="example@mail.com" value="chhornelit@gmail.com"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3">Mobile Phone:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="mobilephone" placeholder="012345678" value="086823938"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3">Address:</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="3" name="address" placeholder="Enter Your Address">Somewhere in PP</textarea>
+                    </div>
+                </div>
+                <div class="page-header">
+                    <h3>Optional Information</h3>
+                </div>
+                <div class="form-group">
+                    <label for="website" class="col-sm-3">Website:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="website" placeholder="Enter your Website Name" value="www.kshrd.com.kh"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="skype" class="col-sm-3">Skype ID:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="skype" placeholder="Enter your Skype ID" value="elit69"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3">Facebook ID:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="facebook" placeholder="Enter Facebook ID" value="Elit Chhorn"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3">Gmail ID:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="gmail" placeholder="Enter Gmail ID" value="chhornelit@gmail.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3">Occupation:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="position" placeholder="Enter your Occupation" value="Student"> </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3">Institute:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="institute" placeholder="Enter your institute" value="KSHRD"> </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label"></label>
+                  <div class="col-sm-9">
+                    <button type="submit" class="btn btn-primary" style="width:200px;">Save Changes</button>
+                    <span></span>
+                    <input type="reset" class="btn btn-default pull-right" value="Back" onclick="location.href='back-end-user-manage.html'">
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+</body>
+</html>

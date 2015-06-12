@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="author" content="Hem Sarin">
+  <meta charset="UTF-8">
+  <meta lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Title and Icon -->
+  <title>HRD Article Management</title>
+  <link rel="icon" href="../img/logo.png" type="img/png" />  
+  <!-- End Title and Icon -->
+
+  <!-- CSS Library -->
+  <link rel="stylesheet" href="../css/lib/standardize.css">  
+  <link rel="stylesheet" href="../css/lib/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/lib/font-awesome-4.3.0/css/font-awesome.min.css">
+  <!-- End CSS Library -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/dashboard-style.css">    
+  <link rel="stylesheet" href="../css/navbar-style.css">
+  <!-- End Custom CSS -->
+
+  <!-- Javascript Library -->
+  <script src="../js/lib/jquery-2.1.4.min.js"></script>    
+  <script src="../js/lib/ckeditor/ckeditor.js"></script>
+  <script src="../js/lib/bootstrap.min.js"></script>
+  <script src="../js/lib/bootstrapValidator.min.js"></script>
+  <script src="../js/lib/jquery-ui.js"></script>
+  <!-- End Javascript Library -->
+  
+  <!-- Custom Javascript -->
+  <script src="../js/navbar-sides-script.js"></script>  
+  <script src="../js/navbar-script.js"></script>
+  <script src="../js/bootstrap-validate-article.js"></script>
+  <script src="../js/delete-table-row.js"></script>
+  <!-- End Custom Javascript -->
+</head>
+<body class="body page-index clearfix">
+  <div class="my-wrapper">
+    <div class="my-header clearfix">
+      <div class="my-web-brand">
+        <a href="dashboard.html"><img src="../img/Site-Logo-text.png"><span>Dashboard</span></a>
+      </div>
+      <div class="my-menu-btn ">
+        <a id="menu" href="#"><i class="fa fa-bars"></i> Menu</a>
+      </div>
+      <div class="my-header-content">
+        <div class="my-header-message">
+          <a href="#"> <i class="fa fa-envelope icon-margin-right"></i> Messages
+          </a>
+        </div>
+        <div class="my-header-logout">
+          <a href="#"> <i class="fa fa-sign-out icon-margin-right"></i> Logout
+          </a>
+        </div>
+      </div>
+      <div class="my-navbar-side" id="cssmenu">
+        <!-- navbar-side-list-->
+        <ul>
+          <li class="has-sub"><a href='#'><span><i class="fa fa-user icon-margin-right"></i>Users</span></a>
+            <ul>
+              <li><a href='back-end-user-add-new.html'><span>Add User</span></a></li>
+              <li><a href='back-end-user-manage.html'><span>Manage User</span></a></li>
+            </ul>                 
+          </li>
+          <li class='has-sub'><a href='#'><span><i class="fa fa-book icon-margin-right"></i>Articles</span></a>
+            <ul>
+              <li><a href='article_add.html'><span>Add Article</span></a></li>
+              <li><a href='category_add.html'><span>Add Category</span></a></li>
+            </ul>
+          </li>
+          <li class="last"><a href='forum_manage.html'><span><i class="fa fa-users icon-margin-right"></i>Forums</span></a></li>
+        </ul>         
+        <!--end navbar-side-list-->
+      </div>
+    </div>
+    <div class="my-body clearfix">
+      <div class="my-navbar-side-background"></div>
+      <!-- content area-->
+      <div id="main" class="container-fluid" >
+        <div class="content-area">
+          <div class="col-sm-11 form-wrapper"> 
+            <!-- Breadcrumb and Page title -->
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="page-title">
+                  <h1>
+                    Dashboard <small>Content Overiew</small>
+                  </h1>
+                  <ol class="breadcrumb">
+                    <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <!--End Breadcrumb and Page title -->
+            <!-- inner content area-->
+            <div class="row">
+              <!--Content Search and Filter-->
+              <ol class="breadcrumb">
+              <div class="panel panel-info">
+                <div class="panel-body">
+                  <h2>Filter Article</h2>
+                  <form role="form">
+                    <div class="col-sm-4">
+                      <br/> 
+                      <label>&nbsp;Search:</label>
+                      <div class="input-group">
+                        <input id="searchArticle" type="textbox" placeholder="Article " class="form-control">
+                        <span class="input-group-btn">
+                        <button class="btn btn-info" type="button" id="addressSearch">Search</button>
+                        </span>
+                      </div>
+                    </div>
+                    <!--Option Filter-->
+                    <div class="col-sm-8">
+                      <br/>          
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                          <label>Author:</label>
+                          <select class="form-control">
+                            <option>All</option>
+                            <option>Hem Sarin</option>
+                            <option>Ke Pisal</option>
+                            <option>Rours Channa</option>
+                            <option>Chhorn Elit</option>
+                            <option>Siang Sambo</option>
+                            <option>Sun Vicheychetra</option>
+                          </select>
+                          <br/>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                          <label>Categorie:</label>
+                          <select class="form-control">
+                            <option>All</option>
+                            <option>Java</option>
+                            <option>Web</option>
+                            <option>Korea</option>
+                            <option>IOS</option>
+                            <option>Android</option>
+                            <option>Database</option>
+                          </select>
+                          <br/>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                          <label>PublishDate:</label>
+                          <input type="date" class="form-control" id="txtdate">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                          <label>View:</label>
+                          <select class="form-control">
+                            <option>All</option>
+                            <option>1000+</option>
+                            <option>900+</option>
+                            <option>800+</option>
+                            <option>700+</option>
+                            <option>600+</option>
+                            <option>500+</option>
+                            <option>400+</option>
+                            <option>300+</option>
+                            <option>200+</option>
+                            <option>100+</option>
+                          </select>
+                          <br/>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                          <label>Rating:</label>
+                          <select class="form-control">
+                            <option>All</option>
+                            <option>9+</option>
+                            <option>8+</option>
+                            <option>7+</option>
+                            <option>6+</option>
+                            <option>5+</option>
+                            <option>3+</option>
+                            <option>2+</option>
+                            <option>1+</option>
+                          </select>
+                          <br/>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
+                          <label>Per_Page:</label>
+                          <select class="form-control">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>100</option>
+                          </select>
+                          <br/>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End Option Filter-->
+                </div>
+                <!-- End inner content area-->
+              </div>
+            </div>
+            <div class="row">
+              <!--Modal Page-->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Edit Article</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form role="form">
+                        <div class="form-group">
+                          <label>Article ID:</label>
+                          <input type="text" class="form-control" id="txtid" placeholder="Article id" value="100" disabled>
+                        </div>
+                        <div class="form-group">
+                          <label>Title:</label>
+                          <input type="text" class="form-control" id="txttitle" placeholder="title" value="Java">
+                        </div>
+                        <div class="form-group">
+                          <label>Author:</label>
+                          <input type="text" class="form-control" id="txauthor" placeholder="author" value="Hem Sarin">
+                        </div>
+                        <div class="form-group">
+                          <label>Category:</label>
+                          <select class="form-control">
+                            <option>Java</option>
+                            <option>Web</option>
+                            <option>Korea</option>
+                            <option>IOS</option>
+                            <option>Android</option>
+                            <option>Database</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Publish Date:</label>
+                          <input type="date" class="form-control" id="txtdate">
+                        </div>
+                        <div class="form-group">
+                          <label>Content:</label>
+                          <textarea class="ckeditor" name="editor1" value="AutoBoxing"></textarea>
+                        </div>
+                        <div class="form-group" style="float:right">
+                          <button class="btn btn-default" >Save</button>
+                          <button class="btn btn-default" >Cancel</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer"></div>
+                  </div>
+                </div>
+              </div>
+            <!--End Modal Page-->
+            <!--Content Table-->
+            <ol class ="breadcrumb">
+              <div class="panel panel-info">
+                <div class="panel-body">
+                  <h2>List Article</h2>
+                  <!--Table View-->
+                  <table class="table table-striped table-bordered table-hover table-condensed">
+                    <tbody id="myrow">
+                      <tr>
+                        <th colspan="2">Action</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Content</th>
+                        <th>PublishDate</th>
+                        <th>View Number</th>
+                        <th>Rate</th>
+                        <th>Categories</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete" >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete"  >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs " data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete"  >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete" >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete"  >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete"  >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete"  >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete"  >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete"  >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal" >
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;Edit
+                          </button> 
+                        </td>
+                        <td>
+                          <button  class="btn btn-danger btn-xs delete"  >
+                          <i class="fa fa-trash-o"></i>&nbsp;&nbsp;Delete
+                          </button> 
+                        </td>
+                        <td>100</td>
+                        <td>JAVA</td>
+                        <td>Hem Sarin</td>
+                        <td>Auto Boxing</td>
+                        <td>11/06/2015</td>
+                        <td>200</td>
+                        <td>300</td>
+                        <td>Programming</td>
+                      </tr>
+                    </tbody>
+                  </table>            
+                  <!--End of Table View-->
+                  <span><b>Total Article : 100</b></span>&nbsp;&nbsp;<span><b>Page : 1/50</b></span>
+                  <ul class="pagination pagination-sm" style="float:right;margin:1px 0;">
+                    <li><a href="#"><<</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">>></a></li>
+                  </ul>
+                </div>
+              </div>
+            </ol>
+            <!-- End of Content Table-->
+            </div>
+            <!-- end content area -->
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+</body>
+</html>
