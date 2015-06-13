@@ -2,13 +2,16 @@
 <html>
 
 <head>
-    <title>Forum</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="ckeditor/ckeditor.js"></script>
-    <link href="bootstrap/css/bootstrap.min.css" rel="StyleSheet" />
-    <link href="bootstrap/css/bootstrap.css" rel="StyleSheet" />
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <link href="./css/style.css" rel="StyleSheet" />
+    <meta name="author" content="Sun Vicheychetra">
+    <meta charset="UTF-8">
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+    <link rel="icon" href="img/Site-Logo-text-black.png" type="img/png" />
+    <link rel="stylesheet" type="text/css" href="css/comment-style.css">
+    <script src="js/lib/jquery-2.1.4.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <title>HRD Article Management</title>
     <style>
     body {
         padding-top: 100px;
@@ -29,7 +32,7 @@
         comment parameter uses for add a comment's user from TextArea */
         function createComment(comment){
             var list = 
-                    "<li class='float-left'><hr/><br/><div class='col-sm-3'><img src='images/bo.jpg' class='img-responsive img-circle' width='100px' height='100px' /><h6><span class='glyphicon glyphicon-user'></span> &nbsp;&nbsp;<a href='#'>Sambo Siang </a></h6><h6 style='color:red;'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Offline</b></h6></div><div class='col-sm-9'><br/><div class='well' style='overflow-wrap: break-word;'>" + 
+                    "<li class='float-left'><hr/><br/><div class='col-sm-3'><img src='img/avatar/bo.jpg' class='img-responsive img-circle' width='100px' height='100px' /><h6><span class='glyphicon glyphicon-user'></span> &nbsp;&nbsp;<a href='#'>Sambo Siang </a></h6><h6 style='color:red;'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Offline</b></h6></div><div class='col-sm-9'><br/><div class='well' style='overflow-wrap: break-word;'>" + 
                                 comment
                             + "</div><h6><span class='glyphicon glyphicon-time'></span> <b> A moment ago</b>  <span class='glyphicon glyphicon-thumbs-up'></span> <b> 9 like</b> <span class='glyphicon glyphicon-thumbs-down'></span><b> 1 unlike</b>  <span class='glyphicon glyphicon-share-alt'></span> <b> 50 shared</b> <span class='glyphicon glyphicon-comment'></span> <a href='#' style='color:black'><b>comment </b></a></h6></div></li>";
             return list; /*return list for Unorder List (ul)*/
@@ -85,7 +88,7 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-sm-3 text-center">
-                        <img src="images/menghok.jpg" class="img-responsive img-circle" />
+                        <img src="img/avatar/menghok.jpg" class="img-responsive img-circle" />
                         <br>
                         <h6><span class="glyphicon glyphicon-user"></span> <a href="#"> Menghok Heak</a></h6>
                         <h6><b>Admin</b></h6>
@@ -102,7 +105,7 @@
                             <ul id="commentBlock">
                                 <li>
                                     <div class="col-sm-3">
-                                        <img src="images/channa.jpg" class="img-responsive img-circle" width="100px" , height="100px" />
+                                        <img src="img/avatar/channa.jpg" class="img-responsive img-circle" width="100px" , height="100px" />
                                         <h6><span class="glyphicon glyphicon-user"></span> &nbsp;&nbsp;<a href="#">Channa Ros </a></h6>
                                         <h6 style="color:red;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Offline</b></h6>
                                     </div>
