@@ -146,8 +146,9 @@ body {
   .my-body .content-area {
     
     margin-left: 0px;
-    margin-top: 0px;
+    margin-top: 54px;
   }
+
 
   .my-body .my-navbar-side-background {
     display: none;
