@@ -105,14 +105,20 @@
                     <div class="col-sm-9">
                         <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name" value="Elit"> </div>
                 </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">Gender:</label>
-                    <div class="col-sm-9">
-                        <label class="radio-inline">
-                            <input type="radio" name="gender" id="radioMale" value="Male" checked> Male </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="gender" id="radioFemale" value="Female"> Female </label>
+                <div class="form-group ">
+                  <label class="col-sm-3">Gender:</label>
+                  <div class="col-xs-5">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="gender" value="male" data-fv-field="gender"> Male
+                        </label>
                     </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="gender" value="female" data-fv-field="gender"> Female
+                        </label>
+                    </div>
+                  </div>
                 </div>
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3">Country:</label>
