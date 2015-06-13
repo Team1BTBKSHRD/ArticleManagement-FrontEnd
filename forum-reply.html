@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forum</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="StyleSheet" />
+    <link href="bootstrap/css/bootstrap.css" rel="StyleSheet" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="StyleSheet" />
+    <style>
+    body {
+        padding-top: 100px;
+    }
+    
+    p {
+        padding: 10px;
+    }
+    
+    img {
+        padding-top: 10px;
+    }
+    </style>
+    <script>
+    $(document).ready(function() {
+        /* Function createComment
+        Use for create a comment when user comments on TextArea Comment 
+        comment parameter uses for add a comment's user from TextArea */
+        function createComment(comment){
+            var list = 
+                    "<li class='float-left'><hr/><br/><div class='col-sm-3'><img src='images/bo.jpg' class='img-responsive img-circle' width='100px' height='100px' /><h6><span class='glyphicon glyphicon-user'></span> &nbsp;&nbsp;<a href='#'>Sambo Siang </a></h6><h6 style='color:red;'><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Offline</b></h6></div><div class='col-sm-9'><br/><div class='well' style='overflow-wrap: break-word;'>" + 
+                                comment
+                            + "</div><h6><span class='glyphicon glyphicon-time'></span> <b> A moment ago</b>  <span class='glyphicon glyphicon-thumbs-up'></span> <b> 9 like</b> <span class='glyphicon glyphicon-thumbs-down'></span><b> 1 unlike</b>  <span class='glyphicon glyphicon-share-alt'></span> <b> 50 shared</b> <span class='glyphicon glyphicon-comment'></span> <a href='#' style='color:black'><b>comment </b></a></h6></div></li>";
+            return list; /*return list for Unorder List (ul)*/
+        }
+
+        /* Event btnPost click 
+        Raise when user click on button Post
+        It will add user commment into Comments Block */
+        $("#btnPost").click(function() {
+            /* Append in UL comment block */
+            $("#commentBlock").append(createComment($("#taComment").val()));
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">HRD Article Management </a>
+            </div>
+            <!--end navbar header-->
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="course.html">Course</a></li>
+                        <li class="active"><a href="forum.html">Forum</a></li>
+                        <li><a href="user-profile.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;My Account</a></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <!--end collapse-->
+        </div>
+        <!--end container-->
+    </nav>
+    <!-- end of NAVBAR -->
+    <!--Body-->
+    <div class="container">
+        <div class="page-header">
+            <h1><b>Server Maintenance</b></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-sm-3 text-center">
+                        <img src="images/menghok.jpg" class="img-responsive img-circle" />
+                        <br>
+                        <h6><span class="glyphicon glyphicon-user"></span> <a href="#"> Menghok Heak</a></h6>
+                        <h6><b>Admin</b></h6>
+                        <h6><span class="glyphicon glyphicon-time"></span> 01/June/2014 11:00am</h6>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="well">
+                            <p> Server Error is because the attitude of Player. Amount of Player is 6000+, and Controller is only few people . So Server will be down few time. Do not compare with Chinese or Malaysian Server. Because if you want the good server , you should spend hug money to build the good server. for Khmer people just only 6000+ player to play. and JX Company host on server with 2GB internet bandwidth. so do you know how much cost per month. So if we start playing new server, we should play and care our new server. Live is art of sharing. The is good experience of Khmer Nationality. I don't care. May be you call me baby or crazy person. Sometime may be I am wrong. Because I am a new player. I don't face with angry thing. but Still want to play new server and play , if JX Company do not correct the problem. I will write here to say sorry to you , RedThom and another player that upset with this Company.
+                                <br> But now I will Play on New server, I will Play YCR and WS.</p>
+                        </div>
+                        <h6><b><span class="glyphicon glyphicon-share-alt"></span> Lastest Reply: 10/June/2014 11:00pm</b>&nbsp;&nbsp;<b><span class="glyphicon glyphicon-eye-open"></span> 100 views</b>&nbsp;&nbsp;<b><span class="glyphicon glyphicon-comment"></span> 4 comments</b></h6>
+                        <hr>
+                        <div class="row">
+                            <ul id="commentBlock">
+                                <li>
+                                    <div class="col-sm-3">
+                                        <img src="images/channa.jpg" class="img-responsive img-circle" width="100px" , height="100px" />
+                                        <h6><span class="glyphicon glyphicon-user"></span> &nbsp;&nbsp;<a href="#">Channa Ros </a></h6>
+                                        <h6 style="color:red;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Offline</b></h6>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <br>
+                                        <div class="well">
+                                            Server Error is because the attitude of Player
+                                        </div>
+                                        <h6><span class="glyphicon glyphicon-time"></span> <b> 10/June/2014 11:00pm</b>  <span class="glyphicon glyphicon-thumbs-up"></span> <b> 9 like</b> <span class="glyphicon glyphicon-thumbs-down"></span><b> 1 unlike</b>  <span class="glyphicon glyphicon-share-alt"></span> <b> 50 shared</b> <span class="glyphicon glyphicon-comment"></span> <a href="#" style="color:black"><b>comment </b></a></h6>
+                                    </div>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="col-sm-12">
+                    <!-- Recent Topic -->
+                    <div class="panel panel-info">
+                        <!-- panel heading -->
+                        <div class="panel-heading">Recent Topic</div>
+                        <!-- end of panel -->
+                        <!-- panel body -->
+                        <div class="panel-body">
+                            <table class="table  table-hover">
+                                <tr>
+                                    <td>
+                                        <a href="#" style="text-decoration:none"><span class="glyphicon glyphicon-chevron-right"></span>  Server Maintenance</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" style="text-decoration:none"><span class="glyphicon glyphicon-chevron-right"></span>  Best Framework for Android apps development</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" style="text-decoration:none"><span class="glyphicon glyphicon-chevron-right"></span>  Learn Korean by yourself</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- end of panel body -->
+                    </div>
+                    <!-- End of Recent Post -->
+                    <hr>
+                    <!-- Top Topic -->
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Top Topics</div>
+                        <div class="panel-body">
+                            <table class="table  table-hover" style="width:99%;">
+                                <tr>
+                                    <td>
+                                        <a href="#" style="text-decoration:none"><span class="glyphicon glyphicon-chevron-right"></span>  How to speak english fluently?</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" style="text-decoration:none"><span class="glyphicon glyphicon-chevron-right"></span>   Best IDE for Java</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" style="text-decoration:none"><span class="glyphicon glyphicon-chevron-right"></span> What is JavaScript?</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- End of Top Topic -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment Area -->
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <br/>
+                <div>
+                    <h5>Write your comment here:</h5>
+                    <textarea cols="75" rows="10" id="taComment"></textarea>
+                    <br/>
+                    <input type="button" value="Post" class="btn btn-primary  float-left" id="btnPost" style="margin-left:490px;" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Comments Block -->-->
+</body>
+
+</html>
