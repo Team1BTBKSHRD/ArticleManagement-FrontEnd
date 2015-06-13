@@ -61,7 +61,8 @@
     <!-- end of navbar -->
     <div class="container">
         <!-- redirect to index form -->
-        <form action="index.html" id="loginForm" method="post" role="form">
+      <!--action="index.html"-->
+        <form  id="loginForm" method="post" role="form">
             <div class="container">
                 <div class="row">
                     <!-- put image logo in center and align text as center -->
@@ -74,13 +75,13 @@
                     <div class="col-md-4 col-md-offset-4">
                         <div class="form-group">
                             <label for="">User Name :</label>
-                            <input type="text" class="form-control" name="usernameLogin" placeholder="Input User Name">
+                            <input id="username_login" type="text" class="form-control" name="usernameLogin" placeholder="Input User Name">
                         </div>
                     </div>
                     <div class="col-md-4 col-md-offset-4">
                         <div class="form-group">
                             <label for="">Password :</label>
-                            <input type="password" class="form-control" name="passwordLogin" placeholder="Input Password">
+                            <input id="pwd_login" type="password" class="form-control" name="passwordLogin" placeholder="Input Password">
                         </div>
                     </div>
                     <div class="col-md-4 col-md-offset-4">
@@ -98,10 +99,11 @@
                             <!-- call register form -->
                             <label for=""><a data-toggle="modal" data-target="#editModal">Register Now</a></label>
                         </div>
+                        
                     </div>
-                    <div class="col-md-4 col-md-offset-4">
+                  <div class="col-md-4 col-md-offset-4">
                         <!-- submit form -->
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default" id="btn_submit">Submit</button>
                     </div>
                 </div>
                 <!--end of row-->
@@ -128,7 +130,7 @@
                         <div class="collapse in" id="generalInformation">
                             <div class="col-md-3">
                                 <div class="thumbnail">
-                                    <img src="img/user.png" alt="">
+                                    <img src="img/100.png" alt="">
                                     <div class="caption text-center">
                                         <p>
                                             <a href="#" class="btn btn-default">Upload Photo</a>
@@ -417,6 +419,25 @@
 
             }
         })
+        
+         $("#btn_submit").click(function () {                    
+         var name=document.getElementById("username_login").value;
+    var pwd=document.getElementById("pwd_login").value;
+    if(name=="admin" && pwd=="admin"){
+      //alert("ddd");
+      window.open("./backend/dashboard.html", "_new");
+      
+    }else if(name==""||pwd==""){
+      alert("Please input again!!!");
+      
+    }else{
+      window.open("index.html", "_new");
+      
+    }
+                    
+                });
+        
+        
     });
     </script>
 </body>

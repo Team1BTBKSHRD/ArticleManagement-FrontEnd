@@ -20,8 +20,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/dashboard-style.css">    
   <link rel="stylesheet" href="../css/navbar-style.css">
-    <!-- hide col table_category (Alias / PublishDate)-->
-  <link rel="stylesheet" href="../css/lib/hidecol.css">
+  <!--<link rel="stylesheet" href="../css/hidecol.css">-->
   <!-- End Custom CSS -->
 
   <!-- Javascript Library -->
@@ -37,7 +36,6 @@
   <script src="../js/navbar-script.js"></script>
   <script src="../js/delete-table-row.js"></script>
   <!-- End Custom Javascript -->
-  
 </head>
 <body class="body page-index clearfix">
   <div class="my-wrapper">
@@ -54,7 +52,7 @@
           </a>
         </div>
         <div class="my-header-logout">
-          <a href="#"> <i class="fa fa-sign-out icon-margin-right"></i> Logout
+          <a href="../login.html"> <i class="fa fa-sign-out icon-margin-right"></i> Logout
           </a>
         </div>
       </div>
@@ -123,8 +121,8 @@
                             <th colspan="2">Action</th>
                             <th>Category_ID</th>
                             <th>Title</th>
-                            <th id="hidecol">Alias</th>
-                            <th id="hidecol">PublishDate</th>
+                            <th>Alias</th>
+                            <th>PublishDate</th>
                         </tr>
                         <tr>
                              <td>
@@ -139,8 +137,8 @@
                             </td>
                             <td>100</td>
                             <td>Web</td>
-                            <td id="hidecol">Hem Sarin</td>
-                            <td id="hidecol">11/06/2015</td>
+                            <td>Hem Sarin</td>
+                            <td>11/06/2015</td>
                         </tr>
     
                         <tr>
@@ -156,8 +154,8 @@
                             </td>
                             <td>101</td>
                             <td>SQL</td>
-                            <td id="hidecol">Hem Sarin</td>
-                            <td id="hidecol">11/06/2015</td>
+                            <td>Hem Sarin</td>
+                            <td>11/06/2015</td>
                         </tr>
     
                           <tr>
@@ -173,8 +171,8 @@
                             </td>
                             <td>102</td>
                             <td>IOS</td>
-                            <td id="hidecol">Hem Sarin</td>
-                            <td id="hidecol">11/06/2015</td>
+                            <td>Hem Sarin</td>
+                            <td>11/06/2015</td>
                         </tr>
     
                         <tr>
@@ -190,8 +188,8 @@
                             </td>
                             <td>103</td>
                             <td>Android</td>
-                            <td id="hidecol">Hem Sarin</td>
-                            <td id="hidecol">11/06/2015</td>
+                            <td>Hem Sarin</td>
+                            <td>11/06/2015</td>
                         </tr>
     
                           <tr>
@@ -207,8 +205,8 @@
                             </td>
                             <td>104</td>
                             <td>Korean</td>
-                            <td id="hidecol">Hem Sarin</td>
-                            <td id="hidecol">11/06/2015</td>
+                            <td>Hem Sarin</td>
+                            <td>11/06/2015</td>
                         </tr>
     
                             <tr>
@@ -224,8 +222,8 @@
                             </td>
                             <td>105</td>
                             <td>Database</td>
-                            <td id="hidecol">Hem Sarin</td>
-                            <td id="hidecol">11/06/2015</td>
+                            <td>Hem Sarin</td>
+                            <td>11/06/2015</td>
                         </tr>
     
                       </tbody>
@@ -250,7 +248,7 @@
             <div class="row">
                 <!--Modal Page-->
               <div class="modal fade" id="myModal" role="dialog">  
-                <div class="modal-dialog modal-md">
+                <div class="modal-dialog modal-sm">
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
