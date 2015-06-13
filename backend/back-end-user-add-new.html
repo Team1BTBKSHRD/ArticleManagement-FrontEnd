@@ -37,7 +37,9 @@
 </head>
 <body class="body page-index clearfix">
   <div class="my-wrapper">
+    <!-- Navigation Bar -->
     <div class="my-header clearfix">
+      <!-- Top Navigation Bar -->
       <div class="my-web-brand">
         <a href="dashboard.html"><img src="../img/Site-Logo-text.png"><span>Dashboard</span></a>
       </div>
@@ -54,8 +56,10 @@
           </a>
         </div>
       </div>
+      <!-- End Top Navigation Bar -->
+
+      <!-- Side Navigation Bar -->
       <div class="my-navbar-side" id="cssmenu">
-        <!-- navbar-side-list-->
         <ul>
           <li class="has-sub"><a href='#'><span><i class="fa fa-user icon-margin-right"></i>Users</span></a>
             <ul>
@@ -73,125 +77,136 @@
         </ul>         
         <!--end navbar-side-list-->
       </div>
+      <!-- End Side Navigation Bar -->
     </div>
+    <!-- End Navigation Bar -->
+
     <div class="my-body clearfix">
       <div class="my-navbar-side-background"></div>
-      <!-- content area-->
+      <!-- Content Area-->
       <div id="main" class="container-fluid" >
         <div class="content-area center-block">
           <div class="col-sm-11 form-wrapper"> 
+            <!-- Form Add -->
             <form method="get" action="back-end-user-manage.html" class="form-horizontal" id="form-signup">
-                <h1>Add New User</h1>
-                <hr>     
-                <div class="page-header">
-                    <h3>General Information</h3>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">First Name:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="firstname" placeholder="Enter First Name"> </div>
-                </div>
-                <div class="form-group">
-                    <label for="LastName" class="col-sm-3">Last Name:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name"> </div>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">Gender:</label>
-                    <div class="col-sm-9">
-                        <label class="radio-inline">
-                            <input type="radio" name="gender" id="radioMale" checked> Male </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="gender" id="radioFemale"> Female </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">Country:</label>
-                    <div class="col-sm-9">
-                        <select name="country" class="form-control" id="selectCountry">
-                            <option class="active">Cambodia</option>
-                            <option>Korea</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">User Role:</label>
-                    <div class="col-sm-9">
-                        <select name="country" class="form-control" id="selectCountry">
-                            <option class="active">Admin</option>
-                            <option>Author</option>
-                            <option>Normal User</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="City" class="col-sm-3">City/Town: </label>
-                    <div class="col-sm-9">
-                        <input type="text" name="city" class="form-control" placeholder="Enter City/Town"> </div>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">Email:</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="email" class="form-control" placeholder="example@mail.com"> </div>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">Mobile Phone:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="mobilephone" placeholder="012345678"> </div>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">Address:</label>
-                    <div class="col-sm-9">
-                        <textarea class="form-control" rows="3" name="address" placeholder="Enter Your Address"></textarea>
-                    </div>
-                </div>
-                <div class="page-header">
-                    <h3>Optional Information</h3>
-                </div>
-                <div class="form-group">
-                    <label for="website" class="col-sm-3">Website:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="website" placeholder="Enter your Website Name"> </div>
-                </div>
-                <div class="form-group">
-                    <label for="skype" class="col-sm-3">Skype ID:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="skype" placeholder="Enter your Skype ID"> </div>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">Facebook ID:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="facebook" placeholder="Enter Facebook ID"> </div>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="col-sm-3">Gmail ID:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="gmail" placeholder="Enter Gmail ID">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3">Occupation:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="position" placeholder="Enter your Occupation"> </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3">Institute:</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="institute" placeholder="Enter your institute"> </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label"></label>
+              <h1>Add New User</h1>
+              <hr> 
+              <!-- General Info -->    
+              <div class="page-header">
+                  <h3>General Information</h3>
+              </div>
+              <div class="form-group">
+                  <label for="firstName" class="col-sm-3">First Name:</label>
                   <div class="col-sm-9">
-                    <button type="submit" class="btn btn-primary" style="width:200px;">Add User</button>
-                    <span></span>
-                    <input type="reset" class="btn btn-default pull-right" value="Back" onclick="location.href='back-end-user-manage.html'">
+                      <input type="text" class="form-control" name="firstname" placeholder="Enter First Name"> </div>
+              </div>
+              <div class="form-group">
+                  <label for="LastName" class="col-sm-3">Last Name:</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name"> </div>
+              </div>
+              <div class="form-group">
+                  <label for="firstName" class="col-sm-3">Gender:</label>
+                  <div class="col-sm-9">
+                      <label class="radio-inline">
+                          <input type="radio" name="gender" id="radioMale" checked> Male </label>
+                      <label class="radio-inline">
+                          <input type="radio" name="gender" id="radioFemale"> Female </label>
                   </div>
+              </div>
+              <div class="form-group">
+                  <label for="firstName" class="col-sm-3">Country:</label>
+                  <div class="col-sm-9">
+                      <select name="country" class="form-control" id="selectCountry">
+                          <option class="active">Cambodia</option>
+                          <option>Korea</option>
+                          <option>Other</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="firstName" class="col-sm-3">User Role:</label>
+                  <div class="col-sm-9">
+                      <select name="country" class="form-control" id="selectCountry">
+                          <option class="active">Admin</option>
+                          <option>Author</option>
+                          <option>Normal User</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="City" class="col-sm-3">City/Town: </label>
+                  <div class="col-sm-9">
+                      <input type="text" name="city" class="form-control" placeholder="Enter City/Town"> </div>
+              </div>
+              <div class="form-group">
+                  <label for="firstName" class="col-sm-3">Email:</label>
+                  <div class="col-sm-9">
+                      <input type="text" name="email" class="form-control" placeholder="example@mail.com"> </div>
+              </div>
+              <div class="form-group">
+                  <label for="firstName" class="col-sm-3">Mobile Phone:</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" name="mobilephone" placeholder="012345678"> </div>
+              </div>
+              <div class="form-group">
+                  <label for="firstName" class="col-sm-3">Address:</label>
+                  <div class="col-sm-9">
+                      <textarea class="form-control" rows="3" name="address" placeholder="Enter Your Address"></textarea>
+                  </div>
+              </div>
+              <!-- End General Info -->    
+
+              <!-- Optional Info -->    
+              <div class="page-header">
+                  <h3>Optional Information</h3>
+              </div>
+              <div class="form-group">
+                  <label for="website" class="col-sm-3">Website:</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" name="website" placeholder="Enter your Website Name"> </div>
+              </div>
+              <div class="form-group">
+                  <label for="skype" class="col-sm-3">Skype ID:</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" name="skype" placeholder="Enter your Skype ID"> </div>
+              </div>
+              <div class="form-group">
+                  <label for="firstName" class="col-sm-3">Facebook ID:</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" name="facebook" placeholder="Enter Facebook ID"> </div>
+              </div>
+              <div class="form-group">
+                  <label for="firstName" class="col-sm-3">Gmail ID:</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" name="gmail" placeholder="Enter Gmail ID">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="col-sm-3">Occupation:</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" name="position" placeholder="Enter your Occupation"> </div>
+              </div>
+              <div class="form-group">
+                  <label class="col-sm-3">Institute:</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" name="institute" placeholder="Enter your institute"> </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label"></label>
+                <div class="col-sm-9">
+                  <button type="submit" class="btn btn-primary" style="width:200px;">Add User</button>
+                  <span></span>
+                  <input type="reset" class="btn btn-default pull-right" value="Back" onclick="location.href='back-end-user-manage.html'">
                 </div>
+              </div>
+              <!-- End Optional Form -->
             </form>
+            <!-- End Form Add -->
           </div>
         </div>      
       </div>
+      <!-- End Content Area-->
     </div>
   </div>
 </body>

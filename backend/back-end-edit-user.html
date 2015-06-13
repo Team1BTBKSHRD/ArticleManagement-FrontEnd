@@ -37,7 +37,9 @@
 </head>
 <body class="body page-index clearfix">
   <div class="my-wrapper">
+    <!-- Navigation Bar -->
     <div class="my-header clearfix">
+      <!-- Top Navigation Bar -->
       <div class="my-web-brand">
         <a href="dashboard.html"><img src="../img/Site-Logo-text.png"><span>Dashboard</span></a>
       </div>
@@ -54,8 +56,10 @@
           </a>
         </div>
       </div>
+      <!-- End Top Navigation Bar -->
+
+      <!-- Side Navigation Bar -->
       <div class="my-navbar-side" id="cssmenu">
-        <!-- navbar-side-list-->
         <ul>
           <li class="has-sub"><a href='#'><span><i class="fa fa-user icon-margin-right"></i>Users</span></a>
             <ul>
@@ -73,16 +77,21 @@
         </ul>         
         <!--end navbar-side-list-->
       </div>
+      <!-- End Side Navigation Bar -->
     </div>
+    <!-- End Navigation Bar -->
+
     <div class="my-body clearfix">
       <div class="my-navbar-side-background"></div>
-      <!-- content area-->
+      <!-- Content Area-->
       <div id="main" class="container-fluid" >
         <div class="content-area center-block">
           <div class="col-sm-11 form-wrapper"> 
+            <!-- Form Edit -->
             <form method="get" action="back-end-user-manage.html" class="form-horizontal" id="form-signup">
                 <h1>Edit User Information</h1>
-                <hr>     
+                <hr>   
+                <!-- General Info -->  
                 <div class="page-header">
                     <h3>General Information</h3>
                 </div>
@@ -146,6 +155,9 @@
                         <textarea class="form-control" rows="3" name="address" placeholder="Enter Your Address">Somewhere in PP</textarea>
                     </div>
                 </div>
+                <!-- End General Info -->  
+
+                <!-- Optional Info -->
                 <div class="page-header">
                     <h3>Optional Information</h3>
                 </div>
@@ -188,10 +200,13 @@
                     <input type="reset" class="btn btn-default pull-right" value="Back" onclick="location.href='back-end-user-manage.html'">
                   </div>
                 </div>
+                <!-- End Optional Info -->
             </form>
+            <!-- End Form Edit -->
           </div>
         </div>      
       </div>
+      <!-- End Content Area-->
     </div>
   </div>
 </body>

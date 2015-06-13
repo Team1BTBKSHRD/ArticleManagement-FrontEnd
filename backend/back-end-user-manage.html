@@ -38,7 +38,9 @@
 </head>
 <body class="body page-index clearfix">
   <div class="my-wrapper">
+    <!-- Navigation Bar -->
     <div class="my-header clearfix">
+      <!-- Top Navigation Bar -->
       <div class="my-web-brand">
         <a href="dashboard.html"><img src="../img/Site-Logo-text.png"><span>Dashboard</span></a>
       </div>
@@ -55,8 +57,10 @@
           </a>
         </div>
       </div>
+      <!-- End Top Navigation Bar -->
+
+      <!-- Side Navigation Bar -->
       <div class="my-navbar-side" id="cssmenu">
-        <!-- navbar-side-list-->
         <ul>
           <li class="has-sub"><a href='#'><span><i class="fa fa-user icon-margin-right"></i>Users</span></a>
             <ul>
@@ -74,17 +78,22 @@
         </ul>         
         <!--end navbar-side-list-->
       </div>
+      <!-- End Side Navigation Bar -->
     </div>
+    <!-- End Navigation Bar -->
+
     <div class="my-body clearfix">
       <div class="my-navbar-side-background"></div>
-      <!-- content area-->
+      <!-- Content Area-->
       <div id="main" class="container-fluid">
         <div class="content-area center-block">
           <div class="col-sm-11 form-wrapper">           
             <h1>Manage All Users</h1>
             <hr>
+            <!-- Form Search -->
             <div class="col-sm-12 search">
               <form role="form">
+                <!-- Search Button -->
                 <div class="col-sm-8">
                   <div class="form-group">                    
                     <div class="col-sm-2"><label>&nbsp;Search:</label></div>
@@ -96,6 +105,9 @@
                     </div> 
                   </div>                                            
                 </div> 
+                <!-- End Search Button -->
+
+                <!-- Search Type Select -->
                 <div class="col-sm-3">
                   <div class="form-group">
                     <label for="firstName" class="col-sm-3">Type:</label>
@@ -107,10 +119,13 @@
                       </select>
                     </div>
                   </div>               
-                </div>               
+                </div>        
+                <!-- End Search Type Select -->       
               </form>             
             </div>
+            <!-- End Form Search -->
 
+            <!-- Table User List -->
             <table class="table table-striped table-bordered table-hover table-condensed">
               <thead>
                 <tr>
@@ -402,6 +417,9 @@
                 </tr>                                                                
               </tbody>                
             </table> 
+            <!-- End Table User List -->
+
+            <!-- Pagination -->
             <div class="col-sm-5  center-block">
               <nav>
                 <ul class="pagination " style="color:black;">
@@ -414,9 +432,11 @@
                 </ul>
               </nav>
             </div>
+            <!-- End Pagination -->
           </div>   
         </div>
       </div>
+      <!-- End Content Area-->
     </div>
   </div>
 </body>
