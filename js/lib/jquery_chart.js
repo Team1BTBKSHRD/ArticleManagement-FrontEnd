@@ -44,7 +44,7 @@ $(document).ready(function() {
 							indexLabelFontColor : "white",
 							indexLabelFontWeight : 300,
 							indexLabelFontStyle : "italic",
-							type : "pie", // Change to other type of graph {pie, line, column ...}
+							type : "column", // Change to other type of graph {pie, line, column ...}
 							dataPoints : [ {
 								y : 21,
 								label : "21",

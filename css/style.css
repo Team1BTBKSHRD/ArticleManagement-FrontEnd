@@ -1,0 +1,45 @@
+mark {
+        background-color: #dff0d8;
+    }
+    
+    .panel-footer > h6 {
+        text-align: right;
+        font-weight: bold;
+    }
+    
+    .green {
+        background-color: #8AC007;
+    }
+    
+    .red {
+        background-color: #c9302c;
+    }
+    
+    .status {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
+        border-radius: 50%;
+        
+    }
+    .float-left{
+        float:left;
+    }
+    .float-right{
+        float:right;
+    }
+    .text-align-left{
+        text-align:left;
+    }
+    .text-align-right{
+        text-align:right;
+    }
+    ul{
+        list-style:none;
+    }
+    textarea{
+        resize:none;
+    }
